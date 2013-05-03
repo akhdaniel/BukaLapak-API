@@ -4,6 +4,11 @@
 	- [Parameters](#parameters)
 	- [Example Request](#example-request)
 	- [Example Response](#example-response)
+- [My Lapak](#my-lapak)
+	- [Resource URL](#resource-url)
+	- [Parameters](#parameters)
+	- [Example Request](#example-request)
+	- [Example Response](#example-response)
 - [Create Product](#create-product)
 	- [Resource URL](#resource-url)
 	- [Parameters](#parameters)
@@ -63,6 +68,33 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 	}
 }
 ````
+### My Lapak
+Get current user's store (lapak)
+
++ Use `GET` http method.
+
+##### Resource URL
++ [https://api.bukalapak.com/v1/products/mylapak.json](). No search parameter available.
++ [https://api.bukalapak.com/v1/products/mylapak.json?sold=true](). Show sold products only.
++ [https://api.bukalapak.com/v1/products/mylapak.json?available=true](). Show available products only.
+
+##### Parameters
++ `sold` *(optional)*. Keywords use to get sold only products.
++ `available` *(optional)*. Keywords use to get available only products.
+
+##### Example Request
+````sh
+curl -u 67287:lXymG93y83m6RHzZV5FY \
+"https://api.bukalapak.com/v1/products/mylapak.json"
+````
+
+##### Example Response
+````json
+{
+	"status":"OK",
+	"products":[{"active":true,"available":true,"cached_slug":"asdasda","car_model_id":null,"car_type":null,"categories_string":null,"category_id":242,"city":"Bekasi","comments_count":0,"contact_fb":null,"contact_name":null,"contact_phone":null,"created_at":"2013-04-15T10:15:31+07:00","delta":true,"description":"asdasdasd","description_bb":"asdasdasd","id":768014,"images_count":0,"kilometer":null,"minimum_negotiable":1300000,"motor_model_id":null,"name":"asdasda","negotiable":true,"new":false,"pilihan":false,"price":1510000,"primary_imageid":null,"province":"Jawa Barat","rent_or_sell":"Dijual","shippping_method":null,"size":null,"sold_at":null,"stat_changed_at":null,"state":"booked","state_changed_at":{"booked_at":"2013-04-15T17:29:06+07:00"},"stock":0,"transmition":null,"type":null,"updated_at":"2013-04-15T17:29:06+07:00","user_id":110675,"weight":"7000","year":null}]
+}
+````
 
 ### Create Product
 Create a new product
@@ -86,7 +118,7 @@ None
 	+ `description_bb` *(required)*. Description for new product. You can use BBCode format.
 	+ `new` *(optional)*. Product condition as in *new* or *used*. Possible value are *true* for *new* and *false* for *used* product.
 	+ `negotiable` *(optional)*. This field indicate whether new product price is negotiable or not. Possible value are *false* for fixed price and *true* for negotiable price. Default value is *false*.
-+ `images` *(required)*. List of images/attachments identifier for new product. Required between 1-5 attachments. Muliple attachments separated by comma. Attachment should be created first and attachment can be used only for one product. More on [attachments]()
++ `images` *(required)*. List of images/attachments identifier for new product. Required between 1-5 attachments. Muliple attachments separated by comma. Attachment should be created first and attachment can be used only for one product. More on [attachments](attachments.md#create-attachment)
 + `product_detail_attribute` *(optional)*. Details attributes for product in JSON. [Attributes are vary based on category of product](categories.md#category-attributes). Some of these fields are:
 	+ `type` *(optional)*. Tyoe of product. For product categorized as *fullbike* type can be *MTB*, *Roadbike*, etc.
 	+ `brand` *(optional)*. For *Fullbike*, brand can be *United*, *Polygon*, etc.
