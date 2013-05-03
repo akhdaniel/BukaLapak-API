@@ -1,4 +1,4 @@
-# [Bukalapak API](README.md)
+### [Bukalapak API](README.md)
 
 ## Introduction
 
@@ -11,5 +11,5 @@ Authentication uses `user_id` and `token` which can be obtained in two ways.
 ## Resources
 + [Authentication for Bukalapak API](authenticate.md#authentication-for-bukalapak-api)
 + [Bukalapak Products API](products.md#bukalapak-products-api)
-+ [Bukalapak Product Category API](categories.#bukalapak-product-category-api)
++ [Bukalapak Product Category API](categories.md#bukalapak-product-category-api)
 + [Bukalapak Attachment API](attachments.md#bukalapak-attachment-api)

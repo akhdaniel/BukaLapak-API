@@ -1,4 +1,4 @@
-# [Bukalapak API](README.md)
+### [&laquo; Home](README.md)
 
 [Authentication for Bukalapak API](#authentication-for-bukalapak-api)
 - [Authenticate](#authenticate)
