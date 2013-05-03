@@ -9,7 +9,7 @@ Authentication uses `user_id` and `token` which can be obtained in two ways.
 + By manually visiting [API Secret Page](https://www.bukalapak.com/users/api_secret) at Bukalapak
 
 ## Resources
-+ [Authentication for Bukalapak API](authenticate.md#authentication-for-bukalapak-api)
-+ [Bukalapak Products API](products.md#bukalapak-products-api)
-+ [Bukalapak Product Category API](categories.md#bukalapak-product-category-api)
-+ [Bukalapak Attachment API](attachments.md#bukalapak-attachment-api)
++ [Authentication for Bukalapak API](authenticate.md#-home)
++ [Bukalapak Products API](products.md#-home)
++ [Bukalapak Product Category API](categories.md#-home)
++ [Bukalapak Attachment API](attachments.md#-home)
