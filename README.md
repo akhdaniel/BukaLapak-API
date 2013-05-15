@@ -12,4 +12,4 @@ Authentication uses `user_id` and `token` which can be obtained in two ways.
 + [Authentication for Bukalapak API](authenticate.md#-home)
 + [Bukalapak Products API](products.md#-home)
 + [Bukalapak Product Category API](categories.md#-home)
-+ [Bukalapak Attachment API](attachments.md#-home)
++ [Bukalapak Image API](images.md#-home)
