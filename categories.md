@@ -27,7 +27,7 @@ None
 
 ##### Example Request
 ````sh
-curl https://api.bukalapak.com/v1/categories.json
+curl -u 67287:lXymG93y83m6RHzZV5FY https://api.bukalapak.com/v1/categories.json
 
 ````
 
@@ -89,7 +89,7 @@ None
 
 ##### Example Request
 ````sh
-curl https://api.bukalapak.com/v1/categories/242/attributes.json
+curl -u 67287:lXymG93y83m6RHzZV5FY https://api.bukalapak.com/v1/categories/242/attributes.json
 
 ````
 

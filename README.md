@@ -13,3 +13,7 @@ Authentication uses `user_id` and `token` which can be obtained in two ways.
 + [Bukalapak Products API](products.md#-home)
 + [Bukalapak Product Category API](categories.md#-home)
 + [Bukalapak Image API](images.md#-home)
+
+## Debugging
++ We provide logging to store your API request parameters. Find it in [API Secret Page](https://www.bukalapak.com/users/api_secret)
++ Tips: turn on `verbose` flag to inspect response from server, i.e. `curl -v https://api.bukalapak.com/v1/object.json`
