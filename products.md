@@ -36,19 +36,19 @@ Get a number of products. If parameter `q` exist, this will give a number of pro
 + Use `GET` http method.
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/products.json](). No search parameter available.
++ [https://api.bukalapak.com/v1/products.json](). No search parameter provided.
 + [https://api.bukalapak.com/v1/products.json?q=mtb](). Show products match with keywords `mtb`.
-+ [https://api.bukalapak.com/v1/products.json?limit=5](). First five products.
++ [https://api.bukalapak.com/v1/products.json?page=1&per_page=10](). First ten products.
 
 ##### Parameters
 + `q` *(optional)*. Keywords use to search products.
-+ `offset` *(optional)*. Discard first `offset` of products, default to `0`.
-+ `limit` *(optional)*. Limit count of products into `limit`, default to `10`.
++ `page` *(optional)*. Pagination page, default to `0`.
++ `per_page` *(optional)*. Number results per_page, default to `20`.
 
 ##### Example Request
 ````sh
 curl -u 67287:lXymG93y83m6RHzZV5FY \
-"https://api.bukalapak.com/v1/products.json?q=mtb&offset=2&limit=1"
+"https://api.bukalapak.com/v1/products.json?q=mtb&page=2&per_page=40"
 ````
 
 ##### Example Response
@@ -56,7 +56,7 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 {
 	"status":"OK",
 	"products":[{
-		"id":700,
+		"id":"kxsp",
 		"category":"Sepeda MTB",
 		"name":"MTB miyata carbon",
 		"city":"Jakarta Selatan",
@@ -64,10 +64,7 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 		"price":5000000,
 		"image":"https://s7.bukalapak.com/system2/images/1/0/6/9/7/thumb/bag-lunch.png?1340957861"
 	}],
-	"metadata":{
-		"offset":"2",
-		"limit":"1"
-	}
+	"message":null
 }
 ````
 ### My Lapak
@@ -94,7 +91,27 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 ````json
 {
 	"status":"OK",
-	"products":[{"active":true,"available":true,"cached_slug":"asdasda","car_model_id":null,"car_type":null,"categories_string":null,"category_id":242,"city":"Bekasi","comments_count":0,"contact_fb":null,"contact_name":null,"contact_phone":null,"created_at":"2013-04-15T10:15:31+07:00","delta":true,"description":"asdasdasd","description_bb":"asdasdasd","id":768014,"images_count":0,"kilometer":null,"minimum_negotiable":1300000,"motor_model_id":null,"name":"asdasda","negotiable":true,"new":false,"pilihan":false,"price":1510000,"primary_imageid":null,"province":"Jawa Barat","rent_or_sell":"Dijual","shippping_method":null,"size":null,"sold_at":null,"stat_changed_at":null,"state":"booked","state_changed_at":{"booked_at":"2013-04-15T17:29:06+07:00"},"stock":0,"transmition":null,"type":null,"updated_at":"2013-04-15T17:29:06+07:00","user_id":110675,"weight":"7000","year":null}]
+	"products":[{
+		"id":"f3vi",
+		"category":"Handphone (HP)",
+		"name":"Gemini PALING MAHAL (made in mexico)",
+		"city":"Jakarta Selatan",
+		"province":"DKI Jakarta",
+		"price":1500000,
+		"image":"https://s0.bukalapak.com/system/images/1/6/7/6/6/8/0/large/IMG00475-20121105-1431.jpg?1352105447",
+		"description":"blackberry 8520 original\r\nnot fake / KW / grade ori\r\njudge by pic\r\nmade in mexico\r\nmemory card and battery not included\r\nberrindo\r\nbought it 2009 september\r\nbox, charger, etc included",
+		"specs":{
+			"brand":"Blackberry",
+			"operating_system":"Blackberry",
+			"features":["Wifi","Bluetooth","Memory Card Slots","MP3","Message","e-mail","Video Player","QWERT Keyboard",""],
+			"bentuk":"Klasik (Bar)",
+			"display_size":"",
+			"camera":"Camera",
+			"garansi":"Tidak bergaransi",
+			"network":"GSM",
+			"body_color":"hitam"
+		}
+	}]
 }
 ````
 
@@ -152,7 +169,7 @@ Successfull example
 ```json
 {
 	"status":"OK",
-	"id":"12702",
+	"id":"kxvi",
 	"message": null
 }
 ```
@@ -171,7 +188,7 @@ Read a product
 ##### Example Request
 ```sh
 curl -u 67287:lXymG93y83m6RHzZV5FY \
-"https://api.bukalapak.com/v1/products/12072.json" -H "Content-Type: application/json" -X GET
+"https://api.bukalapak.com/v1/products/kxvi.json" -H "Content-Type: application/json" -X GET
 ```
 
 ##### Example Response
@@ -181,7 +198,7 @@ Successfull example
 	"status":"OK",
 	"product":
 	{
-		"id":12071, "category":"Handphone (HP)", "name":"NOKIA 5200- Black", "city":"Jakarta Selatan", "province":"DKI Jakarta", "price":500000, "image":"https://s5.bukalapak.com/system2/images/5/thumb/nokia.jpg?1264040052"
+		"id":kxvi, "category":"Handphone (HP)", "name":"NOKIA 5200- Black", "city":"Jakarta Selatan", "province":"DKI Jakarta", "price":500000, "image":"https://s5.bukalapak.com/system2/images/5/thumb/nokia.jpg?1264040052"
 	},
 	"message":null
 }
@@ -202,7 +219,7 @@ Delete existing product
 ##### Example Request
 ```sh
 curl -u 67287:lXymG93y83m6RHzZV5FY \
-"https://api.bukalapak.com/v1/products/12072.json" -H "Content-Type: application/json" -X DELETE
+"https://api.bukalapak.com/v1/products/kxvi.json" -H "Content-Type: application/json" -X DELETE
 ```
 
 ##### Example Response
@@ -210,7 +227,7 @@ Successfull example
 ```json
 {
 	"status":"OK",
-	"id":"12702",
+	"id":"kxvi",
 	"message": null
 }
 ```
