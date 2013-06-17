@@ -26,7 +26,7 @@ None
 
 ##### Example Request
 ````sh
-curl -u billy:Highs3creT https://api.bukalapak.com/v1/authenticate.json
+curl -u billy:Highs3creT https://api.bukalapak.com/v1/authenticate.json -X POST
 
 ````
 
