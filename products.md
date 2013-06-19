@@ -17,6 +17,11 @@
 	- [POST request data](#post-request-data)
 	- [Example Request](#example-request)
 	- [Example Response](#example-response)
+- [Update Product](#update-product)
+	- [Resource URL](#resource-url)
+	- [Parameters](#parameters)
+	- [Example Request](#example-request)
+	- [Example Response](#example-response)
 - [Read Product](#read-product)
 	- [Resource URL](#resource-url)
 	- [Parameters](#parameters)
@@ -185,6 +190,71 @@ Successfull example
 }
 ```
 
+### Update Product
+Update an existing user's product
+
++ Use `PUT` http method.
++ Requires authentication
+
+##### Resource URL
++ [https://api.bukalapak.com/v1/products/:id.json]().
+
+##### Parameters
++ `id` *(required)*. Identifier for product being read.
+
+##### PUT request data
++ `product` *(required)*. Attributes of existing product in JSON. Attributes constructed by following fields:
+	+ `name` *(required)*. Product name.
+	+ `price` *(required)*. Product price.
+	+ `weight` *(required)*. Product weight in grams.
+	+ `stock` *(required)*. Number existing product in stock.
+	+ `description_bb` *(required)*. Description for existing product. You can use BBCode format.
+	+ `new` *(optional)*. Product condition as in *new* or *used*. Possible value are *true* for *new* and *false* for *used* product.
+	+ `negotiable` *(optional)*. This field indicate whether existing product price is negotiable or not. Possible value are *false* for fixed price and *true* for negotiable price. Default value is *false*.
++ `images` *(optional)*. List of images identifier for existing product. Required between 1-5 images. Muliple images separated by comma. Image should be created first and image can be used only for one product. More on [images](images.md#create-image)
++ `product_detail_attribute` *(optional)*. Details attributes for product in JSON. [Attributes are vary based on category of product](categories.md#category-attributes). Some of these fields are:
+	+ `type` *(optional)*. Tyoe of product. For product categorized as *fullbike* type can be *MTB*, *Roadbike*, etc.
+	+ `brand` *(optional)*. For *Fullbike*, brand can be *United*, *Polygon*, etc.
+	+ `ukuran` *(optional)*.
+	+ `bahan` *(optional)*.
+
+##### Example Request
+```sh
+curl -u 67287:lXymG93y83m6RHzZV5FY \
+-d '{ \
+	"product": { "price":"2700000", "stock":"2" } }' \
+"https://api.bukalapak.com/v1/products/f3vi.json" -H "Content-Type: application/json" -X PUT
+```
+
+##### Example Response
+```json
+{
+	"status":"OK",
+	"product": {
+		"id":"f3vi",
+		"category":"Handphone (HP)",
+		"name":"Gemini PALING MAHAL (made in mexico)",
+		"city":"Jakarta Selatan",
+		"province":"DKI Jakarta",
+		"price":2700000,
+		"image":"https://s0.bukalapak.com/system/images/1/6/7/6/6/8/0/large/IMG00475-20121105-1431.jpg?1352105447",
+		"description":"blackberry 8520 original\r\nnot fake / KW / grade ori\r\njudge by pic\r\nmade in mexico\r\nmemory card and battery not included\r\nberrindo\r\nbought it 2009 september\r\nbox, charger, etc included",
+		"specs":{
+			"brand":"Blackberry",
+			"operating_system":"Blackberry",
+			"features":["Wifi","Bluetooth","Memory Card Slots","MP3","Message","e-mail","Video Player","QWERT Keyboard",""],
+			"bentuk":"Klasik (Bar)",
+			"display_size":"",
+			"camera":"Camera",
+			"garansi":"Tidak bergaransi",
+			"network":"GSM",
+			"body_color":"hitam"
+		}
+	},
+	"message": null
+}
+```
+
 ### Read Product
 Read a product
 
@@ -257,7 +327,7 @@ Set Product to Available
 ##### Example Request
 ```sh
 curl -u 67287:lXymG93y83m6RHzZV5FY \
-"https://api.bukalapak.com/v1/products/kxvi/sold.json" -H "Content-Type: application/json" -X PUT
+"https://api.bukalapak.com/v1/products/kxvi/relist.json" -H "Content-Type: application/json" -X PUT
 ```
 
 ##### Example Response
