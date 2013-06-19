@@ -20,6 +20,7 @@
 - [Update Product](#update-product)
 	- [Resource URL](#resource-url)
 	- [Parameters](#parameters)
+	- [PUT request data](#put-request-data)
 	- [Example Request](#example-request)
 	- [Example Response](#example-response)
 - [Read Product](#read-product)
