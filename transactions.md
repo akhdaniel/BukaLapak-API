@@ -1,7 +1,7 @@
 ### [&laquo; Home](README.md)
 
 [Bukalapak Transactions API](#bukalapak-transactions-api)
-- [List Products](#list-transactions)
+- [List Transactions](#list-transactions)
   - [Resource URL](#resource-url)
   - [Parameters](#parameters)
   - [Example Request](#example-request)
