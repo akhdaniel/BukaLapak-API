@@ -22,6 +22,16 @@
 	- [Parameters](#parameters)
 	- [Example Request](#example-request)
 	- [Example Response](#example-response)
+- [Sold Product](#sold-product)
+	- [Resource URL](#resource-url)
+	- [Parameters](#parameters)
+	- [Example Request](#example-request)
+	- [Example Response](#example-response)
+- [Relist Product](#relist-product)
+	- [Resource URL](#resource-url)
+	- [Parameters](#parameters)
+	- [Example Request](#example-request)
+	- [Example Response](#example-response)
 - [Delete Product](#delete-product)
 	- [Resource URL](#resource-url)
 	- [Parameters](#parameters)
@@ -46,13 +56,13 @@ Get a number of products. If parameter `q` exist, this will give a number of pro
 + `per_page` *(optional)*. Number results per_page, default to `20`.
 
 ##### Example Request
-````sh
+```sh
 curl -u 67287:lXymG93y83m6RHzZV5FY \
 "https://api.bukalapak.com/v1/products.json?q=mtb&page=2&per_page=40"
-````
+```
 
 ##### Example Response
-````json
+```json
 {
 	"status":"OK",
 	"products":[{
@@ -66,7 +76,8 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 	}],
 	"message":null
 }
-````
+```
+
 ### My Lapak
 Get current user's store (lapak)
 
@@ -82,13 +93,13 @@ Get current user's store (lapak)
 + `available` *(optional)*. Keywords use to get available only products.
 
 ##### Example Request
-````sh
+```sh
 curl -u 67287:lXymG93y83m6RHzZV5FY \
 "https://api.bukalapak.com/v1/products/mylapak.json"
-````
+```
 
 ##### Example Response
-````json
+```json
 {
 	"status":"OK",
 	"products":[{
@@ -113,7 +124,7 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 		}
 	}]
 }
-````
+```
 
 ### Create Product
 Create a new product
@@ -201,6 +212,60 @@ Successfull example
 		"id":kxvi, "category":"Handphone (HP)", "name":"NOKIA 5200- Black", "city":"Jakarta Selatan", "province":"DKI Jakarta", "price":500000, "image":"https://s5.bukalapak.com/system2/images/5/thumb/nokia.jpg?1264040052"
 	},
 	"message":null
+}
+```
+
+### Sold Product
+Set Product to Sold
+
++ Use `PUT` http method.
++ Requires authentication
+
+##### Resource URL
++ [https://api.bukalapak.com/v1/products/:id/sold.json]().
+
+##### Parameters
++ `id` *(required)*. Identifier for product being read.
+
+##### Example Request
+```sh
+curl -u 67287:lXymG93y83m6RHzZV5FY \
+"https://api.bukalapak.com/v1/products/kxvi/sold.json" -H "Content-Type: application/json" -X PUT
+```
+
+##### Example Response
+```json
+{
+	"status":"OK",
+	"id": "kxvi",
+	"message": "Product has been set to sold"
+}
+```
+
+### Relist Product
+Set Product to Available
+
++ Use `PUT` http method.
++ Requires authentication
+
+##### Resource URL
++ [https://api.bukalapak.com/v1/products/:id/relist.json]().
+
+##### Parameters
++ `id` *(required)*. Identifier for product being read.
+
+##### Example Request
+```sh
+curl -u 67287:lXymG93y83m6RHzZV5FY \
+"https://api.bukalapak.com/v1/products/kxvi/sold.json" -H "Content-Type: application/json" -X PUT
+```
+
+##### Example Response
+```json
+{
+	"status":"OK",
+	"id": "kxvi",
+	"message": "Product has been set to available"
 }
 ```
 
