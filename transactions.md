@@ -1,7 +1,17 @@
 ### [&laquo; Home](README.md)
 
 [Bukalapak Transactions API](#bukalapak-transactions-api)
-- [List Products](#list-products)
+- [List Products](#list-transactions)
+  - [Resource URL](#resource-url)
+  - [Parameters](#parameters)
+  - [Example Request](#example-request)
+  - [Example Response](#example-response)
+- [Get Transaction](#get-transaction)
+  - [Resource URL](#resource-url)
+  - [Parameters](#parameters)
+  - [Example Request](#example-request)
+  - [Example Response](#example-response)
+- [Confirm Shipping for Transaction](#confirm-shipping)
   - [Resource URL](#resource-url)
   - [Parameters](#parameters)
   - [Example Request](#example-request)
@@ -24,12 +34,12 @@ Get transactions owned by current user.
 + `per_page` *(optional)*. Number of transactions `per_page`, default to `10`.
 
 ##### Example Request
-````sh
+```sh
 curl -u 67287:lXymG93y83m6RHzZV5FY "https://api.bukalapak.com/v1/transactions.json?page=2"
-````
+```
 
 ##### Example Response
-````json
+```json
 {
   "status":"OK",
   "transactions":[{
@@ -70,4 +80,87 @@ curl -u 67287:lXymG93y83m6RHzZV5FY "https://api.bukalapak.com/v1/transactions.js
   }]
   ,"message":null
 }
-````
+```
+
+### Get Transaction
+Get transaction details owned by current user.
+
++ Use `GET` http method.
+
+##### Resource URL
++ [https://api.bukalapak.com/v1/transactions/:id.json]().
+
+##### Parameters
++ `id` *(required)*. Identifier for transaction being read.
+
+##### Example Request
+```sh
+curl -u 67287:lXymG93y83m6RHzZV5FY "https://api.bukalapak.com/v1/transactions/7870.json"
+```
+
+##### Example Response
+```json
+{
+  "status":"OK",
+  "transactions":{
+    "id":7870,
+    "state":"remitted",
+    "transaction_id":"130429230001",
+    "amount":2340000,
+    "shipping_fee":9000,
+    "total_amount":2349000,
+    "product":{
+      "name":"Kamara", "url":"https://www.bukalapak.com/p/kamera/kamera-digital/gglw_-kamara"
+    },
+    "buyer":{
+      "id":31432, "name":"Khairul", "username":"kahirul"
+    },
+    "seller":{
+      "id":62817, "name":"Sayur Kangkung", "username":"sayurkangkung"
+    },
+    "actions":[]
+  }
+  ,"message":null
+}
+```
+
+### Confirm Shipping
+Confirm Shipping for Transaction
+
++ Use `POST` http method.
++ Requires authentication
+
+##### Resource URL
++ [https://api.bukalapak.com/v1/transactions/confirm_shipping.json]().
+
+##### Parameters
+None
+
+##### POST request data
++ `payment_shipping` *(required)*. Attributes of transaction shipping confirmation in JSON. Attributes constructed by following fields:
+  + `transaction_id` *(required)*. Transaction ID
+  + `shipping_code` *(required)*. Shipping receipt code
+  + `new_courier` *(optional)*. Used if courier used other than JNE, TIKI, or POS
+
+##### Example Request
+```sh
+curl -u 67287:lXymG93y83m6RHzZV5FY -d '{ "payment_shipping": { "transaction_id":"7870", "shipping_code":"1568772840123" } }' https://api.bukalapak.com/v1/transactions/confirm_shipping.json -H "Content-Type: application/json" -X POST
+```
+
+##### Example Response
+Failed example
+```json
+{
+  "status":"ERROR",
+	"id":null,
+	"message": "Belum ada konfirmasi pembayaran atau konfirmasi pengiriman barang sudah dilakukan"
+}
+```
+Successfull example
+```json
+{
+	"status":"ERROR",
+	"id":"1315",
+	"message": "Konfirmasi pengiriman barang berhasil"
+}
+```
