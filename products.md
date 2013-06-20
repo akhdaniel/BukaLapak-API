@@ -108,27 +108,28 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 ```json
 {
 	"status":"OK",
-	"products":[{
-		"id":"f3vi",
-		"category":"Handphone (HP)",
-		"name":"Gemini PALING MAHAL (made in mexico)",
-		"city":"Jakarta Selatan",
-		"province":"DKI Jakarta",
-		"price":1500000,
-		"image":"https://s0.bukalapak.com/system/images/1/6/7/6/6/8/0/large/IMG00475-20121105-1431.jpg?1352105447",
-		"description":"blackberry 8520 original\r\nnot fake / KW / grade ori\r\njudge by pic\r\nmade in mexico\r\nmemory card and battery not included\r\nberrindo\r\nbought it 2009 september\r\nbox, charger, etc included",
-		"specs":{
-			"brand":"Blackberry",
-			"operating_system":"Blackberry",
-			"features":["Wifi","Bluetooth","Memory Card Slots","MP3","Message","e-mail","Video Player","QWERT Keyboard",""],
-			"bentuk":"Klasik (Bar)",
-			"display_size":"",
-			"camera":"Camera",
-			"garansi":"Tidak bergaransi",
-			"network":"GSM",
-			"body_color":"hitam"
-		}
-	}]
+	"products":[
+	{
+	  "id":"mab5",
+	  "category":"Suspension",
+	  "category_structure":["Sepeda","Fork & Suspension","Suspension"],
+	  "name":"Testing BL App",
+	  "city":"Jakarta Selatan",
+	  "province":"DKI Jakarta",
+	  "price":1250000,
+	  "images":["https://s1.bukalapak.com/system/images/2/5/3/2/7/3/6/large/IMG_0205.JPG?1371219033"],
+	  "url":"https://www.bukalapak.com/p/sepeda/fork-suspension/suspension/mab5_-testing-bl-app",
+	  "desc":"Test upload from BL App, please ignore",
+	  "condition":"new",
+	  "nego":true,
+	  "seller_name":"Me Oww",
+	  "payment_ready":true,
+	  "specs":{
+	    "merk_shock":null,
+	    "size_shock":null,
+	    "spring":null
+	    }
+	  }]
 }
 ```
 
