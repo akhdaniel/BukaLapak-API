@@ -159,7 +159,7 @@ Failed example
 Successfull example
 ```json
 {
-	"status":"ERROR",
+	"status":"OK",
 	"id":"1315",
 	"message": "Konfirmasi pengiriman barang berhasil"
 }
