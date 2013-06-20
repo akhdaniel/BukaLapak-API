@@ -205,11 +205,11 @@ Update an existing user's product
 
 ##### PUT request data
 + `product` *(required)*. Attributes of existing product in JSON. Attributes constructed by following fields:
-	+ `name` *(required)*. Product name.
-	+ `price` *(required)*. Product price.
-	+ `weight` *(required)*. Product weight in grams.
-	+ `stock` *(required)*. Number existing product in stock.
-	+ `description_bb` *(required)*. Description for existing product. You can use BBCode format.
+	+ `name` *(optional)*. Product name.
+	+ `price` *(optional)*. Product price.
+	+ `weight` *(optional)*. Product weight in grams.
+	+ `stock` *(optional)*. Number existing product in stock.
+	+ `description_bb` *(optional)*. Description for existing product. You can use BBCode format.
 	+ `new` *(optional)*. Product condition as in *new* or *used*. Possible value are *true* for *new* and *false* for *used* product.
 	+ `negotiable` *(optional)*. This field indicate whether existing product price is negotiable or not. Possible value are *false* for fixed price and *true* for negotiable price. Default value is *false*.
 + `images` *(optional)*. List of images identifier for existing product. Required between 1-5 images. Muliple images separated by comma. Image should be created first and image can be used only for one product. More on [images](images.md#create-image)
