@@ -61,13 +61,13 @@ Get a number of products. If parameter `q` exist, this will give a number of pro
 + `page` *(optional)*. Pagination page, default to `0`.
 + `per_page` *(optional)*. Number results per_page, default to `20`.
 
-##### Example Request
+##### Example Request by Keywords
 ```sh
 curl -u 67287:lXymG93y83m6RHzZV5FY \
 "https://api.bukalapak.com/v1/products.json?keywords=fixie&page=2&per_page=20"
 ```
 
-##### Example Response
+##### Example Response by Keywords 
 ```json
 {
 	"status":"OK",
@@ -100,13 +100,13 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 }
 ```
 
-##### Example Request
+##### Example Request by Keywords, Minimum Price and Maximum Price
 ```sh
 curl -u 67287:lXymG93y83m6RHzZV5FY \
 "https://api.bukalapak.com/v1/products.json?keywords=galaxy+tab&price_range=on&price_min=3300000&price_max=3500000"
 ```
 
-##### Example Response
+##### Example Response by Keywords, Minimum Price and Maximum Price
 ```json
 {
 	"status":"OK",
@@ -156,13 +156,13 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 }
 ```
 
-##### Example Request
+##### Example Request by Brand
 ```sh
 curl -u 67287:lXymG93y83m6RHzZV5FY \
 "https://api.bukalapak.com/v1/products.json?brand=Polygon"
 ```
 
-##### Example Response
+##### Example Response by Brand
 ```json
 {
 	"status":"OK",
@@ -194,13 +194,13 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 }
 ```
 
-##### Example Request
+##### Example Request by Nego
 ```sh
 curl -u 67287:lXymG93y83m6RHzZV5FY \
 "https://api.bukalapak.com/v1/products.json?nego=1
 ```
 
-##### Example Response
+##### Example Response by Nego
 ```json
 {
 	"status":"OK",
@@ -234,13 +234,13 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 }
 ```
 
-##### Example Request
+##### Example Request by Keywords and Range Price
 ```sh
 curl -u 67287:lXymG93y83m6RHzZV5FY \
 "https://api.bukalapak.com/v1/products.json?keywords=blackberry&price_range=5000000-10000000"
 ```
 
-##### Example Response
+##### Example Response by Keywords and Range Price
 ```json
 {
 	"status":"OK",
@@ -276,13 +276,13 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 }
 ```
 
-##### Example Request
+##### Example Request by Keywords and New Condtions
 ```sh
 curl -u 67287:lXymG93y83m6RHzZV5FY \
 "https://api.bukalapak.com/v1/products.json?keywords=nikon&conditions\[\]=new"
 ```
 
-##### Example Response
+##### Example Response by Keywords and New Condtions
 ```json
 {
 	"status":"OK",
@@ -319,13 +319,13 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 }
 ```
 
-##### Example Request
+##### Example Request by Keywords and Used Condtions
 ```sh
 curl -u 67287:lXymG93y83m6RHzZV5FY \
 "https://api.bukalapak.com/v1/products.json?keywords=canon&conditions\[\]=used"
 ```
 
-##### Example Response
+##### Example Response by Keywords and Used Condtions
 ```json
 {
 	"status":"OK",
