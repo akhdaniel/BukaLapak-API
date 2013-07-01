@@ -64,7 +64,7 @@ Get a number of products. If parameter `q` exist, this will give a number of pro
 ##### Example Request
 ```sh
 curl -u 67287:lXymG93y83m6RHzZV5FY \
-"https://api.bukalapak.com/v1/products.json?q=mtb&page=2&per_page=40"
+"https://api.bukalapak.com/v1/products.json?keywords=fixie&page=2&per_page=20"
 ```
 
 ##### Example Response
@@ -72,17 +72,296 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 {
 	"status":"OK",
 	"products":[{
-		"id":"kxsp",
-		"category":"Sepeda MTB",
-		"name":"MTB miyata carbon",
-		"city":"Jakarta Selatan",
-		"province":"Jawa Tengah",
-		"price":5000000,
-		"image":"https://s7.bukalapak.com/system2/images/1/0/6/9/7/thumb/bag-lunch.png?1340957861"
+		"id":"mtvk",
+		"category":"Fixie",
+		"category_structure":["Sepeda","Frame","Fixie"],
+		"name":"Frameset BRAIN Atales (NEW) Pink Sz 52 On SALE!!!",
+		"city":"Jakarta Timur",
+		"province":"DKI Jakarta",
+		"price":850000,
+		"images":["https://s4.bukalapak.com/system/images/2/5/9/1/4/2/4/large/image.jpg?1372228356"],
+		"url":"https://www.bukalapak.com/p/sepeda/frame/fixie-376/mtvk_-frameset-brain-atales-new-pink-sz-52-on-sale",
+		"desc":"Frameset BRAIN Atales (NEW) Pink Sz 52 SALE!!!\r\n\r\nIncld:\r\n- frame\r\n- fork\r\n- headset",
+		"condition":"new",
+		"nego":false,
+		"seller_name":"S S",
+		"payment_ready":true,
+		"stock":1,
+		"specs":{
+			"brand":"Lain-lain",
+			"type":"Track",
+			"bahan":"Alloy",
+			"ukuran":"52",
+			"ukuran_seat_tube":"27,2",
+			"ukuran_headtube":"1 1/8 inch (Over Size)"
+		}
 	}],
 	"message":null
 }
 ```
+
+##### Example Request
+```sh
+curl -u 67287:lXymG93y83m6RHzZV5FY \
+"https://api.bukalapak.com/v1/products.json?keywords=galaxy+tab&price_range=on&price_min=3300000&price_max=3500000"
+```
+
+##### Example Response
+```json
+{
+	"status":"OK",
+	"products":[{
+		"id":"ix45",
+		"category":"Handphone (HP)",
+		"category_structure":["HP & Elektronik","Handphone (HP)"],
+		"name":"Dijual Galaxy Tab 2, 7inch",
+		"city":"Jakarta Utara",
+		"province":"DKI Jakarta",
+		"price":3350000,
+		"images":["https://s2.bukalapak.com/system/images/2/1/2/9/3/2/2/large/20130211_143503.jpg?1362242270"],
+		"url":"https://www.bukalapak.com/p/hp-elektronik/handphone-hp/ix45_-dijual-galaxy-tab-2-7inch",
+		"desc":"barang lengkap, mulus, pembelian, jadi masi garansi :)",
+		"condition":"used",
+		"nego":true,
+		"seller_name":"hendrik poltak",
+		"payment_ready":true,
+		"stock":1,
+		"specs":{
+			"brand":"Samsung",
+			"operating_system":"Android",
+			"features":[
+				"Touchscreen",
+				"Wifi",
+				"Bluetooth",
+				"3G",
+				"GPS Navigation",
+				"Memory Card Slots",
+				"MP3",
+				"Message",
+				"e-mail",
+				"Video Player",
+				"Front Camera",
+				"QWERT Keyboard",
+				""
+			],
+			"bentuk":"Klasik (Bar)",
+			"display_size":"7.0\"",
+			"camera":"Camera",
+			"garansi":"1-12 bulan",
+			"network":"GSM",
+			"body_color":"putih"
+		}
+	}],
+	"message":null
+}
+```
+
+##### Example Request
+```sh
+curl -u 67287:lXymG93y83m6RHzZV5FY \
+"https://api.bukalapak.com/v1/products.json?brand=Polygon"
+```
+
+##### Example Response
+```json
+{
+	"status":"OK",
+	"products":[{
+		"id":"n2fc",
+		"category":"MTB",
+		"category_structure":["Sepeda","Fullbike","MTB"],
+		"name":"Polygon Cozmic RXX Carbon size:16\" kondisi Baru Groupset XTR",
+		"city":"Cilacap",
+		"province":"Jawa Tengah",
+		"price":21000000,
+		"images":["https://s1.bukalapak.com/system2/images/2/6/1/6/0/8/1/large/DSCN6379a.JPG?1372661546"],
+		"url":"https://www.bukalapak.com/p/sepeda/fullbike/mtb/n2fc_-polygon-cozmic-rxx-carbon-size16-kondisi-baru-groupset-xtr--3",
+		"desc":"Polygon Cozmic RXX Carbon size:16 kondisi Baru Groupset XTR + Fork Mosso...",
+		"condition":"new",
+		"nego":true,
+		"seller_name":
+		"Bernadus Hariyanto (Ghober168)",
+		"payment_ready":true,
+		"stock":1,
+		"specs":{
+			"brand":"Polygon",
+			"type":"XC (Cross Country)",
+			"bahan":null,
+			"ukuran":null
+		}
+	},
+	"message":null
+}
+```
+
+##### Example Request
+```sh
+curl -u 67287:lXymG93y83m6RHzZV5FY \
+"https://api.bukalapak.com/v1/products.json?nego=1
+```
+
+##### Example Response
+```json
+{
+	"status":"OK",
+	"products":[{
+		"id":"n2he",
+		"category":"MTB",
+		"category_structure":["Sepeda","Frame","MTB"],
+		"name":"frame dartmoor hornet 2013",
+		"city":"Tangerang Selatan",
+		"province":"Banten",
+		"price":2600000,
+		"images":["https://s0.bukalapak.com/system2/images/2/6/1/6/2/7/5/large/20130528_103510.jpg?1372663040"],
+		"url":"https://www.bukalapak.com/p/sepeda/frame/mtb-372/n2he_-frame-dartmoor-hornet-2013--2",
+		"desc":"frame dartmoor hornet 2013..kondisi mulus..pemakaian  bln mei 2013..",
+		"condition":"used",
+		"nego":true,
+		"seller_name":"denny irenk",
+		"payment_ready":true,
+		"stock":1,
+		"specs":{
+			"brand":"Dartmoor",
+			"type":"All Mountain",
+			"bahan":"Alloy",
+			"ukuran":"14.5",
+			"Spacing":null,
+			"ukuran_seat_tube":"",
+			"ukuran_headtube":"1 1/8 inch (Over Size)"
+		}
+	}],
+	"message":null
+}
+```
+
+##### Example Request
+```sh
+curl -u 67287:lXymG93y83m6RHzZV5FY \
+"https://api.bukalapak.com/v1/products.json?keywords=blackberry&price_range=5000000-10000000"
+```
+
+##### Example Response
+```json
+{
+	"status":"OK",
+	"products":[{
+		"id":"n2hf",
+		"category":"Handphone (HP)",
+		"category_structure":["HP & Elektronik","Handphone (HP)"],
+		"name":"BLACKBERRY Q10 GARANSI RESMI SCM (Authorised Distributor)",
+		"city":"Jakarta Selatan",
+		"province":"DKI Jakarta",
+		"price":6999000,
+		"images":["https://s4.bukalapak.com/system/images/2/6/1/6/2/7/4/large/q10_scm.jpg?1372662756"],
+		"url":"https://www.bukalapak.com/p/hp-elektronik/handphone-hp/n2hf_-blackberry-q10-garansi-resmi-scm-authorised-distributor",
+		"desc":"BLACKBERRY Q10\r\nKondisi: BRAND NEW IN BOX (BNIB).\r\nGARANSI: 2 TAHUN dari SCM ...",
+			"condition":"new",
+			"nego":false,
+			"seller_name":"superx07",
+			"payment_ready":true,
+			"stock":10,
+			"specs":{
+				"brand":"Blackberry",
+				"operating_system":"Blackberry",
+				"features":[""],
+				"bentuk":"Klasik (Bar)",
+				"display_size":"3.2\"",
+				"camera":"Camera",
+				"garansi":"1-12 bulan",
+				"network":"GSM",
+				"body_color":"putih"
+			}
+		}],
+	"message":null
+}
+```
+
+##### Example Request
+```sh
+curl -u 67287:lXymG93y83m6RHzZV5FY \
+"https://api.bukalapak.com/v1/products.json?keywords=nikon&conditions\[\]=new"
+```
+
+##### Example Response
+```json
+{
+	"status":"OK",
+	"products":[{
+		"id":"n1vh",
+		"category":"Digital Camera",
+		"category_structure":["Kamera","Digital Camera"],
+		"name":"Nikon D7000 KIT",
+		"city":"Surabaya",
+		"province":"Jawa Timur",
+		"price":2250000,
+		"images":["https://s0.bukalapak.com/system2/images/2/6/1/4/5/0/5/large/950.jpg?1372648607"],
+		"url":"https://www.bukalapak.com/p/kamera/digital-camera/n1vh_-nikon-d7000-kit--39",
+		"desc":"Barang 100% asli original\r\nNikon D7000 ...",
+		"condition":"new",
+		"nego":false,
+		"seller_name":"mitra_kamera72",
+		"payment_ready":true,
+		"stock":1,
+		"specs":{
+			"type":"D-SLR",
+			"brand":"Nikon",
+			"megapixel":"<5.00MP",
+			"optical_zoom":"0",
+			"screen_size":"",
+			"garansi":"1-12 bulan",
+			"memory_card_type":"MicroSD",
+			"body_color":"hitam",
+			"video":"Yes",
+			"image_stabilization":""
+		}
+	}],
+	"message":null
+}
+```
+
+##### Example Request
+```sh
+curl -u 67287:lXymG93y83m6RHzZV5FY \
+"https://api.bukalapak.com/v1/products.json?keywords=canon&conditions\[\]=used"
+```
+
+##### Example Response
+```json
+{
+	"status":"OK",
+	"products":[{
+		"id":"n2gn",
+		"category":"Digital Camera",
+		"category_structure":["Kamera","Digital Camera"],
+		"name":"Canon EOS 650D, Sigma 30mm f1.4 EX DC HSM, Canon Speedlite 320EX",
+		"city":"Jakarta Selatan",
+		"province":"DKI Jakarta",
+		"price":11000000,
+		"images":["https://s0.bukalapak.com/system2/images/2/6/1/6/1/9/5/large/Objektiv.jpg?1372662175"],
+		"url":"https://www.bukalapak.com/p/kamera/digital-camera/n2gn_-canon-eos-650d-sigma-30mm-f14-ex-dc-hsm-canon-speedlite-320ex",
+		"desc":"Dijual paketan ataupun ketengan:\r\n\r\nBody Canon EOS 650D (dus kit) beserta perlengkapannya Rp ensa Sigma 30mm f/1.4 EX DC HSM Rp 5.000.000\r\n\r\nSpeedlite Canon 320EX Rp 1.500.000\r\n\r\nSemuanya beli awal 2013 di JPC, masih bergaransi, mulus.\r\n\r\nBoleh beli paketan komplit  atau dimutilasi dengan harga seperti yang udah ditulis.\r\n\r\nFoto yang ada sementara masih ambil dari internet karena barang di rumah, nanti akan diupdate :)",
+		"condition":"used",
+		"nego":true,
+		"seller_name":"Kevin Oei",
+		"payment_ready":true,
+		"stock":1,
+		"specs":{
+			"type":"D-SLR",
+			"brand":"Canon",
+			"megapixel":"10.0 - 20.0MP",
+			"optical_zoom":"0",
+			"screen_size":"",
+			"garansi":"1-12 bulan",
+			"memory_card_type":"MicroSD",
+			"body_color":"hitam",
+			"video":"Yes",
+			"image_stabilization":""
+		}
+	}],
+	"message":null
+}
+```
+
 
 ### My Lapak
 Get current user's store (lapak)
