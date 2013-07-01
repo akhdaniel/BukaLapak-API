@@ -70,17 +70,41 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 ##### Example Response
 ```json
 {
-	"status":"OK",
-	"products":[{
-		"id":"kxsp",
-		"category":"Sepeda MTB",
-		"name":"MTB miyata carbon",
-		"city":"Jakarta Selatan",
-		"province":"Jawa Tengah",
-		"price":5000000,
-		"image":"https://s7.bukalapak.com/system2/images/1/0/6/9/7/thumb/bag-lunch.png?1340957861"
-	}],
-	"message":null
+  "status":"OK",
+  "products":[
+  {
+    "id":"llyq",
+    "category":"Digital Camera",
+    "category_structure":["Kamera","Digital Camera"],
+    "name":"Nikon (Test, please ignore)",
+    "city":"Jakarta Selatan",
+    "province":"DKI Jakarta",
+    "price":5500000,
+    "images":["https://s1.bukalapak.com/system/images/2/4/5/4/5/6/6/large/81M95oa1m2L._SL1500_.jpg?1369729801"],
+    "url":"https://www.bukalapak.com/p/kamera/digital-camera/llyq_-nikon-test-please-ignore",
+    "desc":"Test, please ignore",
+    "condition":"used",
+    "nego":true,
+    "seller_name":"Me Oww",
+    "payment_ready":true,
+    "stock":1,
+    "specs":{
+      "type":"D-SLR",
+      "brand":"Nikon",
+      "megapixel":"5.0 - 9.9MP",
+      "optical_zoom":"0",
+      "screen_size":"",
+      "garansi":"1-12 bulan",
+      "memory_card_type":"MicroSD",
+      "body_color":"hitam",
+      "video":"Yes",
+      "image_stabilization":""
+    }
+  },
+  {
+    ...
+  }],
+  "message":null
 }
 ```
 
