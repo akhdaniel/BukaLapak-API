@@ -189,7 +189,7 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 			"bahan":null,
 			"ukuran":null
 		}
-	},
+	}],
 	"message":null
 }
 ```
