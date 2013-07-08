@@ -364,19 +364,16 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 
 
 ### My Lapak
-Get current user's store (lapak)
+Get current user's store (lapak). Products returned for this request are those which can be purchased.
 
 + Use `GET` http method.
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/products/mylapak.json](). No search parameter available.
-+ [https://api.bukalapak.com/v1/products/mylapak.json?sold=true](). Show sold products only.
-+ [https://api.bukalapak.com/v1/products/mylapak.json?available=true](). Show available products only.
++ [https://api.bukalapak.com/v1/products/mylapak.json](). No search parameter available. Get products which **can be purchased**.
++ [https://api.bukalapak.com/v1/products/mylapak.json?not_for_sale_only=1](). Get products which **can not be purchased**.
 
 ##### Parameters
-+ `sold` *(optional)*. Keywords use to get sold only products.
-+ `available` *(optional)*. Keywords use to get available only products.
-
++ `not_for_sale_only` *(optional)*. Ask to return products which can not be purchased if set to **1**
 ##### Example Request
 ```sh
 curl -u 67287:lXymG93y83m6RHzZV5FY \
