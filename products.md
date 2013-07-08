@@ -374,6 +374,7 @@ Get current user's store (lapak). Products returned for this request are those w
 
 ##### Parameters
 + `not_for_sale_only` *(optional)*. Ask to return products which can not be purchased if set to **1**
+
 ##### Example Request
 ```sh
 curl -u 67287:lXymG93y83m6RHzZV5FY \
