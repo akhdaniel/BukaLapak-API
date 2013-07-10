@@ -490,7 +490,8 @@ Update an existing user's product
 	+ `description_bb` *(optional)*. Description for existing product. You can use BBCode format.
 	+ `new` *(optional)*. Product condition as in *new* or *used*. Possible value are *true* for *new* and *false* for *used* product.
 	+ `negotiable` *(optional)*. This field indicate whether existing product price is negotiable or not. Possible value are *false* for fixed price and *true* for negotiable price. Default value is *false*.
-+ `images` *(optional)*. List of images identifier for existing product. Required between 1-5 images. Muliple images separated by comma. Image should be created first and image can be used only for one product. More on [images](images.md#create-image)
++ `new_images` *(optional)*. List of new images identifier for existing product. There should be between 1-5 images after adding new images . Multiple images separated by comma. Image should be created first and image can be used only for one product. More on [images](images.md#create-image)
++ `removed_images` *(optional)*. List of existing images identifier to be removed from existing product. There should be between 1-5 images after images deletion. Multiple images separated by comma. Image should be asscociated with existing product.
 + `product_detail_attribute` *(optional)*. Details attributes for product in JSON. [Attributes are vary based on category of product](categories.md#category-attributes). Some of these fields are:
 	+ `type` *(optional)*. Tyoe of product. For product categorized as *fullbike* type can be *MTB*, *Roadbike*, etc.
 	+ `brand` *(optional)*. For *Fullbike*, brand can be *United*, *Polygon*, etc.
@@ -500,10 +501,11 @@ Update an existing user's product
 ##### Example Request
 ```sh
 curl -u 67287:lXymG93y83m6RHzZV5FY \
--d '{ \
-	"product": { "price":"2700000", "stock":"2" } }' \
+-d '{ "product": { "price":"2700000", "stock":"2" }, "new_images": "623525,4552235", "removed_images":"866632" }' \
 "https://api.bukalapak.com/v1/products/f3vi.json" -H "Content-Type: application/json" -X PUT
 ```
+
+
 
 ##### Example Response
 ```json
