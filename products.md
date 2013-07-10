@@ -443,9 +443,9 @@ None
 ```sh
 curl -u 67287:lXymG93y83m6RHzZV5FY \
 -d '{ \
-	"product": { "category_id":"242", "name":"Polygon Helios 200", "new":"true", "price":"2700000", "negotiable":"true", "weight":"5000", "stock":"2", "description_bb":"Sepeda roadbike polygon series helios 200"}, \
-	"images":"10820,10822,10283", \
-	"product_detail_attribute":{ "type":"Roadbike", "brand":"Polygon", "bahan":"Cromoly"}}' \
+	"product": { "category_id":"242", "name":"Polygon Helios 200", "new":"true", "price":"2700000", "negotiable":"true", "weight":"5000", "stock":"2", "description_bb":"Sepeda roadbike polygon series helios 200", \
+	"product_detail_attribute":{ "type":"Roadbike", "brand":"Polygon", "bahan":"Cromoly" } }, \
+	"images":"10820,10822,10283"}' \
 "https://api.bukalapak.com/v1/products.json" -H "Content-Type: application/json" -X POST
 ```
 
