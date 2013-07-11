@@ -432,7 +432,7 @@ None
 	+ `description_bb` *(required)*. Description for new product. You can use BBCode format.
 	+ `new` *(optional)*. Product condition as in *new* or *used*. Possible value are *true* for *new* and *false* for *used* product.
 	+ `negotiable` *(optional)*. This field indicate whether new product price is negotiable or not. Possible value are *false* for fixed price and *true* for negotiable price. Default value is *false*.
-	+ `product_detail_attribute` *(optional)*. Details attributes for product in JSON. [Attributes are vary based on category of product](categories.md#category-attributes). Some of these fields are:
+	+ `product_detail_attributes` *(optional)*. Details attributes for product in JSON. [Attributes are vary based on category of product](categories.md#category-attributes). Some of these fields are:
 		+ `type` *(optional)*. Tyoe of product. For product categorized as *fullbike* type can be *MTB*, *Roadbike*, etc.
 		+ `brand` *(optional)*. For *Fullbike*, brand can be *United*, *Polygon*, etc.
 		+ `ukuran` *(optional)*.
@@ -444,7 +444,7 @@ None
 curl -u 67287:lXymG93y83m6RHzZV5FY \
 -d '{ \
 	"product": { "category_id":"242", "name":"Polygon Helios 200", "new":"true", "price":"2700000", "negotiable":"true", "weight":"5000", "stock":"2", "description_bb":"Sepeda roadbike polygon series helios 200", \
-	"product_detail_attribute":{ "type":"Roadbike", "brand":"Polygon", "bahan":"Cromoly" } }, \
+	"product_detail_attributes":{ "type":"Roadbike", "brand":"Polygon", "bahan":"Cromoly" } }, \
 	"images":"10820,10822,10283"}' \
 "https://api.bukalapak.com/v1/products.json" -H "Content-Type: application/json" -X POST
 ```
@@ -490,7 +490,7 @@ Update an existing user's product
 	+ `description_bb` *(optional)*. Description for existing product. You can use BBCode format.
 	+ `new` *(optional)*. Product condition as in *new* or *used*. Possible value are *true* for *new* and *false* for *used* product.
 	+ `negotiable` *(optional)*. This field indicate whether existing product price is negotiable or not. Possible value are *false* for fixed price and *true* for negotiable price. Default value is *false*.
-	+ `product_detail_attribute` *(optional)*. Details attributes for product in JSON. [Attributes are vary based on category of product](categories.md#category-attributes). Some of these fields are:
+	+ `product_detail_attributes` *(optional)*. Details attributes for product in JSON. [Attributes are vary based on category of product](categories.md#category-attributes). Some of these fields are:
 		+ `type` *(optional)*. Tyoe of product. For product categorized as *fullbike* type can be *MTB*, *Roadbike*, etc.
 		+ `brand` *(optional)*. For *Fullbike*, brand can be *United*, *Polygon*, etc.
 		+ `ukuran` *(optional)*.
