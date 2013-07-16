@@ -14,7 +14,9 @@ Authentication uses `user_id` and `token` which can be obtained in two ways.
 + [Bukalapak Product Category API](categories.md#-home)
 + [Bukalapak Image API](images.md#-home)
 + [Bukalapak Transaction API](transactions.md#-home)
++ [Bukalapak Negotiation API](negotiations.md#-home)
 + [Bukalapak Message API](messages.md#-home)
++ [Bukalapak User API](users.md#-home)
 
 ## Debugging
 + We provide logging to store your API request parameters. Find it in [API Secret Page](https://www.bukalapak.com/users/api_secret)
