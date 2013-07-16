@@ -41,14 +41,14 @@ Get current user's inbox
 + Use `GET` http method.
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/products/messages.json]().
++ [https://api.bukalapak.com/v1/messages.json]().
 
 ##### Parameters
 None
 
 ##### Example Request
 ````sh
-curl -u 67287:lXymG93y83m6RHzZV5FY https://api.bukalapak.com/v1/products/messages.json
+curl -u 67287:lXymG93y83m6RHzZV5FY https://api.bukalapak.com/v1/messages.json
 ````
 
 ##### Example Response
@@ -56,7 +56,7 @@ curl -u 67287:lXymG93y83m6RHzZV5FY https://api.bukalapak.com/v1/products/message
 {
 	"status":"OK",
 	"unread":0,
-	"inbox":[{"_id":"516d3299425762188f000011","created_at":"2013-04-16T18:14:33+07:00","partner_id":"110675","updated_at":"2013-04-17T11:30:29+07:00","user_id":"110677"}]
+	"inbox":[{"id":"518d0d42318b276640000009","updated_at":"2013-07-04T11:47:35+07:00","partner_id":"6","partner_name":"Administrator","user_id":"15","user_name":"Me Ow"},{"id":"515417c4318b273063000014","updated_at":"2013-04-18T23:01:18+07:00","partner_id":"46688","partner_name":"Cust.Service BukaLapak ","user_id":"15","user_name":"Me Ow"}]
 }
 ````
 
@@ -66,14 +66,14 @@ Get current user's selected conversation
 + Use `GET` http method.
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/products/messages/:id.json]().
++ [https://api.bukalapak.com/v1/messages/:id.json]().
 
 ##### Parameters
 None
 
 ##### Example Request
 ````sh
-curl -u 67287:lXymG93y83m6RHzZV5FY https://api.bukalapak.com/v1/products/messages/516d3299425762188f000011.json
+curl -u 67287:lXymG93y83m6RHzZV5FY https://api.bukalapak.com/v1/messages/516d3299425762188f000011.json
 ````
 
 ##### Example Response
@@ -91,14 +91,14 @@ Get current user's selected message
 + Use `GET` http method.
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/products/messages/im/:id.json]().
++ [https://api.bukalapak.com/v1/messages/im/:id.json]().
 
 ##### Parameters
 None
 
 ##### Example Request
 ````sh
-curl -u 67287:lXymG93y83m6RHzZV5FY https://api.bukalapak.com/v1/products/messages/im/516e2565177961034c000002.json
+curl -u 67287:lXymG93y83m6RHzZV5FY https://api.bukalapak.com/v1/messages/im/516e2565177961034c000002.json
 ````
 
 ##### Example Response
