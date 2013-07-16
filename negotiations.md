@@ -16,19 +16,6 @@
 	- [Parameters](#parameters)
 	- [Example Request](#example-request)
 	- [Example Response](#example-response)
-<!-- - [Create Negotiation](#create-negotiation)
-	- [Resource URL](#resource-url)
-	- [Parameters](#parameters)
-	- [POST request data](#post-request-data)
-	- [Example Request](#example-request)
-	- [Example Response](#example-response)
-- [Update Negotiation](#update-negotiation)
-	- [Resource URL](#resource-url)
-	- [Parameters](#parameters)
-	- [PUT request data](#put-request-data)
-	- [Example Request](#example-request)
-	- [Example Response](#example-response)
- -->
 ## Bukalapak Negotiations API
 
 ### Negotation Listing
@@ -211,6 +198,21 @@ Failed example
   "message": null
 }
 ```
+
+<!--
+ - [Create Negotiation](#create-negotiation)
+	- [Resource URL](#resource-url)
+	- [Parameters](#parameters)
+	- [POST request data](#post-request-data)
+	- [Example Request](#example-request)
+	- [Example Response](#example-response)
+- [Update Negotiation](#update-negotiation)
+	- [Resource URL](#resource-url)
+	- [Parameters](#parameters)
+	- [PUT request data](#put-request-data)
+	- [Example Request](#example-request)
+	- [Example Response](#example-response)
+ -->
 
 <!-- ### Create Negotation
 Create a new negotiation
