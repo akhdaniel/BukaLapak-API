@@ -22,6 +22,10 @@
 ### List Transactions
 Get transactions owned by current user.
 
+You can optionally set `If-None-Match` header or `Etag` header. If request `Etag` match, server will send `304 Not Modified` response without body.
+
+Server will set `Etag` header to every request to this resource.
+
 + Use `GET` http method.
 
 ##### Resource URL
@@ -84,6 +88,10 @@ curl -u 67287:lXymG93y83m6RHzZV5FY "https://api.bukalapak.com/v1/transactions.js
 
 ### Get Transaction
 Get transaction details owned by current user.
+
+You can optionally set `If-None-Match` header or `Etag` header. If request `Etag` match, server will send `304 Not Modified` response without body.
+
+Server will set `Etag` header to every request to this resource.
 
 + Use `GET` http method.
 

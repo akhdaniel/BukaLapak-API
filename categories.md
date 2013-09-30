@@ -17,6 +17,10 @@
 ### List Category
 Get all `product's category`
 
+You can optionally set `If-None-Match` header or `Etag` header. If request `Etag` match, server will send `304 Not Modified` response without body.
+
+Server will set `Etag` header to every request to this resource.
+
 + Use `GET` http method.
 
 ##### Resource URL
@@ -56,13 +60,13 @@ curl -u 67287:lXymG93y83m6RHzZV5FY https://api.bukalapak.com/v1/categories.json
           "147":"Samsung",
           "150":"LG",
           "151":"Lain-lain"
-        },       
+        },
         "154":"Lain-lain"
       },
       "Kamera":{
         "119":"SLR Fullset",
         "199":"Others"
-      }      
+      }
     },
     "Properti":{
       "74":"Rumah",
@@ -78,6 +82,10 @@ curl -u 67287:lXymG93y83m6RHzZV5FY https://api.bukalapak.com/v1/categories.json
 
 ### Category Attributes
 Get attributes for a category
+
+You can optionally set `If-None-Match` header or `Etag` header. If request `Etag` match, server will send `304 Not Modified` response without body.
+
+Server will set `Etag` header to every request to this resource.
 
 + Use `GET` http method.
 

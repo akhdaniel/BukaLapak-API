@@ -49,6 +49,10 @@
 ### List Products
 Get a number of products. If parameter `q` exist, this will give a number of products matching with keywords `q`
 
+You can optionally set `If-None-Match` header or `Etag` header. If request `Etag` match, server will send `304 Not Modified` response without body.
+
+Server will set `Etag` header to every request to this resource.
+
 + Use `GET` http method.
 
 ##### Resource URL
@@ -65,9 +69,12 @@ Get a number of products. If parameter `q` exist, this will give a number of pro
 ```sh
 curl -u 67287:lXymG93y83m6RHzZV5FY \
 "https://api.bukalapak.com/v1/products.json?keywords=fixie&page=2&per_page=20"
+
+curl -u 67287:lXymG93y83m6RHzZV5FY -H 'If-None-Match: "9c17139c006bd5e543028b12b978967b"' \
+"https://api.bukalapak.com/v1/products.json"
 ```
 
-##### Example Response by Keywords 
+##### Example Response by Keywords
 ```json
 {
 	"status":"OK",
@@ -366,6 +373,10 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 ### My Lapak
 Get current user's store (lapak). Products returned for this request are those which can be purchased.
 
+You can optionally set `If-None-Match` header or `Etag` header. If request `Etag` match, server will send `304 Not Modified` response without body.
+
+Server will set `Etag` header to every request to this resource.
+
 + Use `GET` http method.
 
 ##### Resource URL
@@ -505,8 +516,6 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 "https://api.bukalapak.com/v1/products/f3vi.json" -H "Content-Type: application/json" -X PUT
 ```
 
-
-
 ##### Example Response
 ```json
 {
@@ -538,6 +547,10 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 
 ### Read Product
 Read a product
+
+You can optionally set `If-None-Match` header or `Etag` header. If request `Etag` match, server will send `304 Not Modified` response without body.
+
+Server will set `Etag` header to every request to this resource.
 
 + Use `GET` http method.
 
