@@ -43,6 +43,7 @@
 	- [Parameters](#parameters)
 	- [Example Request](#example-request)
 	- [Example Response](#example-response)
+- [Dictionary](#dictionary)
 
 ## Bukalapak Products API
 
@@ -87,6 +88,7 @@ curl -u 67287:lXymG93y83m6RHzZV5FY -H 'If-None-Match: "9c17139c006bd5e543028b12b
 		"province":"DKI Jakarta",
 		"price":850000,
 		"images":["https://s4.bukalapak.com/system/images/2/5/9/1/4/2/4/large/image.jpg?1372228356"],
+		"small_images":["https://s4.bukalapak.com/system/images/2/5/9/1/4/2/4/small/image.jpg?1372228356"],
 		"url":"https://www.bukalapak.com/p/sepeda/frame/fixie-376/mtvk_-frameset-brain-atales-new-pink-sz-52-on-sale",
 		"desc":"Frameset BRAIN Atales (NEW) Pink Sz 52 SALE!!!\r\n\r\nIncld:\r\n- frame\r\n- fork\r\n- headset",
 		"condition":"new",
@@ -101,7 +103,8 @@ curl -u 67287:lXymG93y83m6RHzZV5FY -H 'If-None-Match: "9c17139c006bd5e543028b12b
 			"ukuran":"52",
 			"ukuran_seat_tube":"27,2",
 			"ukuran_headtube":"1 1/8 inch (Over Size)"
-		}
+		},
+		"state_description": []
 	}],
 	"message":null
 }
@@ -126,6 +129,7 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 		"province":"DKI Jakarta",
 		"price":3350000,
 		"images":["https://s2.bukalapak.com/system/images/2/1/2/9/3/2/2/large/20130211_143503.jpg?1362242270"],
+		"small_images":["https://s2.bukalapak.com/system/images/2/1/2/9/3/2/2/small/20130211_143503.jpg?1362242270"],
 		"url":"https://www.bukalapak.com/p/hp-elektronik/handphone-hp/ix45_-dijual-galaxy-tab-2-7inch",
 		"desc":"barang lengkap, mulus, pembelian, jadi masi garansi :)",
 		"condition":"used",
@@ -157,7 +161,8 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 			"garansi":"1-12 bulan",
 			"network":"GSM",
 			"body_color":"putih"
-		}
+		},
+		"state_description": []
 	}],
 	"message":null
 }
@@ -182,6 +187,7 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 		"province":"Jawa Tengah",
 		"price":21000000,
 		"images":["https://s1.bukalapak.com/system2/images/2/6/1/6/0/8/1/large/DSCN6379a.JPG?1372661546"],
+		"small_images":["https://s1.bukalapak.com/system2/images/2/6/1/6/0/8/1/small/DSCN6379a.JPG?1372661546"],
 		"url":"https://www.bukalapak.com/p/sepeda/fullbike/mtb/n2fc_-polygon-cozmic-rxx-carbon-size16-kondisi-baru-groupset-xtr--3",
 		"desc":"Polygon Cozmic RXX Carbon size:16 kondisi Baru Groupset XTR + Fork Mosso...",
 		"condition":"new",
@@ -195,7 +201,8 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 			"type":"XC (Cross Country)",
 			"bahan":null,
 			"ukuran":null
-		}
+		},
+		"state_description": []
 	}],
 	"message":null
 }
@@ -220,6 +227,7 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 		"province":"Banten",
 		"price":2600000,
 		"images":["https://s0.bukalapak.com/system2/images/2/6/1/6/2/7/5/large/20130528_103510.jpg?1372663040"],
+		"small_images":["https://s0.bukalapak.com/system2/images/2/6/1/6/2/7/5/small/20130528_103510.jpg?1372663040"],
 		"url":"https://www.bukalapak.com/p/sepeda/frame/mtb-372/n2he_-frame-dartmoor-hornet-2013--2",
 		"desc":"frame dartmoor hornet 2013..kondisi mulus..pemakaian  bln mei 2013..",
 		"condition":"used",
@@ -235,7 +243,8 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 			"Spacing":null,
 			"ukuran_seat_tube":"",
 			"ukuran_headtube":"1 1/8 inch (Over Size)"
-		}
+		},
+		"state_description":[]
 	}],
 	"message":null
 }
@@ -251,17 +260,19 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 ```json
 {
 	"status":"OK",
-	"products":[{
-		"id":"n2hf",
-		"category":"Handphone (HP)",
-		"category_structure":["HP & Elektronik","Handphone (HP)"],
-		"name":"BLACKBERRY Q10 GARANSI RESMI SCM (Authorised Distributor)",
-		"city":"Jakarta Selatan",
-		"province":"DKI Jakarta",
-		"price":6999000,
-		"images":["https://s4.bukalapak.com/system/images/2/6/1/6/2/7/4/large/q10_scm.jpg?1372662756"],
-		"url":"https://www.bukalapak.com/p/hp-elektronik/handphone-hp/n2hf_-blackberry-q10-garansi-resmi-scm-authorised-distributor",
-		"desc":"BLACKBERRY Q10\r\nKondisi: BRAND NEW IN BOX (BNIB).\r\nGARANSI: 2 TAHUN dari SCM ...",
+	"products":[
+		{
+			"id":"n2hf",
+			"category":"Handphone (HP)",
+			"category_structure":["HP & Elektronik","Handphone (HP)"],
+			"name":"BLACKBERRY Q10 GARANSI RESMI SCM (Authorised Distributor)",
+			"city":"Jakarta Selatan",
+			"province":"DKI Jakarta",
+			"price":6999000,
+			"images":["https://s4.bukalapak.com/system/images/2/6/1/6/2/7/4/large/q10_scm.jpg?1372662756"],
+			"small_images":["https://s4.bukalapak.com/system/images/2/6/1/6/2/7/4/small/q10_scm.jpg?1372662756"],
+			"url":"https://www.bukalapak.com/p/hp-elektronik/handphone-hp/n2hf_-blackberry-q10-garansi-resmi-scm-authorised-distributor",
+			"desc":"BLACKBERRY Q10\r\nKondisi: BRAND NEW IN BOX (BNIB).\r\nGARANSI: 2 TAHUN dari SCM ...",
 			"condition":"new",
 			"nego":false,
 			"seller_name":"superx07",
@@ -277,7 +288,8 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 				"garansi":"1-12 bulan",
 				"network":"GSM",
 				"body_color":"putih"
-			}
+			},
+			"state_description":[]
 		}],
 	"message":null
 }
@@ -302,6 +314,7 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 		"province":"Jawa Timur",
 		"price":2250000,
 		"images":["https://s0.bukalapak.com/system2/images/2/6/1/4/5/0/5/large/950.jpg?1372648607"],
+		"small_images":["https://s0.bukalapak.com/system2/images/2/6/1/4/5/0/5/small/950.jpg?1372648607"],
 		"url":"https://www.bukalapak.com/p/kamera/digital-camera/n1vh_-nikon-d7000-kit--39",
 		"desc":"Barang 100% asli original\r\nNikon D7000 ...",
 		"condition":"new",
@@ -320,7 +333,8 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 			"body_color":"hitam",
 			"video":"Yes",
 			"image_stabilization":""
-		}
+		},
+		"state_description":[]
 	}],
 	"message":null
 }
@@ -345,6 +359,7 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 		"province":"DKI Jakarta",
 		"price":11000000,
 		"images":["https://s0.bukalapak.com/system2/images/2/6/1/6/1/9/5/large/Objektiv.jpg?1372662175"],
+		"small_images":["https://s0.bukalapak.com/system2/images/2/6/1/6/1/9/5/small/Objektiv.jpg?1372662175"],
 		"url":"https://www.bukalapak.com/p/kamera/digital-camera/n2gn_-canon-eos-650d-sigma-30mm-f14-ex-dc-hsm-canon-speedlite-320ex",
 		"desc":"Dijual paketan ataupun ketengan:\r\n\r\nBody Canon EOS 650D (dus kit) beserta perlengkapannya Rp ensa Sigma 30mm f/1.4 EX DC HSM Rp 5.000.000\r\n\r\nSpeedlite Canon 320EX Rp 1.500.000\r\n\r\nSemuanya beli awal 2013 di JPC, masih bergaransi, mulus.\r\n\r\nBoleh beli paketan komplit  atau dimutilasi dengan harga seperti yang udah ditulis.\r\n\r\nFoto yang ada sementara masih ambil dari internet karena barang di rumah, nanti akan diupdate :)",
 		"condition":"used",
@@ -363,7 +378,8 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 			"body_color":"hitam",
 			"video":"Yes",
 			"image_stabilization":""
-		}
+		},
+		"state_description":[]
 	}],
 	"message":null
 }
@@ -397,27 +413,30 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 {
 	"status":"OK",
 	"products":[
-	{
-	  "id":"mab5",
-	  "category":"Suspension",
-	  "category_structure":["Sepeda","Fork & Suspension","Suspension"],
-	  "name":"Testing BL App",
-	  "city":"Jakarta Selatan",
-	  "province":"DKI Jakarta",
-	  "price":1250000,
-	  "images":["https://s1.bukalapak.com/system/images/2/5/3/2/7/3/6/large/IMG_0205.JPG?1371219033"],
-	  "url":"https://www.bukalapak.com/p/sepeda/fork-suspension/suspension/mab5_-testing-bl-app",
-	  "desc":"Test upload from BL App, please ignore",
-	  "condition":"new",
-	  "nego":true,
-	  "seller_name":"Me Oww",
-	  "payment_ready":true,
-	  "specs":{
-	    "merk_shock":null,
-	    "size_shock":null,
-	    "spring":null
-	    }
-	  }]
+		{
+		  "id":"mab5",
+		  "category":"Suspension",
+		  "category_structure":["Sepeda","Fork & Suspension","Suspension"],
+		  "name":"Testing BL App",
+		  "city":"Jakarta Selatan",
+		  "province":"DKI Jakarta",
+		  "price":1250000,
+		  "images":["https://s1.bukalapak.com/system/images/2/5/3/2/7/3/6/large/IMG_0205.JPG?1371219033"],
+		  "small_images":["https://s1.bukalapak.com/system/images/2/5/3/2/7/3/6/small/IMG_0205.JPG?1371219033"],
+		  "url":"https://www.bukalapak.com/p/sepeda/fork-suspension/suspension/mab5_-testing-bl-app",
+		  "desc":"Test upload from BL App, please ignore",
+		  "condition":"new",
+		  "nego":true,
+		  "seller_name":"Me Oww",
+		  "payment_ready":true,
+		  "specs":{
+		    "merk_shock":null,
+		    "size_shock":null,
+		    "spring":null
+		  },
+		  "state_description":[]
+		}
+	]
 }
 ```
 
@@ -490,7 +509,7 @@ Update an existing user's product
 + [https://api.bukalapak.com/v1/products/:id.json]().
 
 ##### Parameters
-+ `id` *(required)*. Identifier for product being read.
++ `id` *(required)*. Identifier for product being updated.
 
 ##### PUT request data
 + `product` *(required)*. Attributes of existing product in JSON. Attributes constructed by following fields:
@@ -528,7 +547,11 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 		"province":"DKI Jakarta",
 		"price":2700000,
 		"image":"https://s0.bukalapak.com/system/images/1/6/7/6/6/8/0/large/IMG00475-20121105-1431.jpg?1352105447",
-		"description":"blackberry 8520 original\r\nnot fake / KW / grade ori\r\njudge by pic\r\nmade in mexico\r\nmemory card and battery not included\r\nberrindo\r\nbought it 2009 september\r\nbox, charger, etc included",
+		"small_images":"https://s0.bukalapak.com/system/images/1/6/7/6/6/8/0/small/IMG00475-20121105-1431.jpg?1352105447",
+		"desc":"blackberry 8520 original\r\nnot fake / KW / grade ori\r\njudge by pic\r\nmade in mexico\r\nmemory card and battery not included\r\nberrindo\r\nbought it 2009 september\r\nbox, charger, etc included",
+		"condition":"new",
+		"nego":true
+		"payment_ready":true
 		"specs":{
 			"brand":"Blackberry",
 			"operating_system":"Blackberry",
@@ -539,7 +562,8 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 			"garansi":"Tidak bergaransi",
 			"network":"GSM",
 			"body_color":"hitam"
-		}
+		},
+		"state_description":[]
 	},
 	"message": null
 }
@@ -573,7 +597,29 @@ Successfull example
 	"status":"OK",
 	"product":
 	{
-		"id":kxvi, "category":"Handphone (HP)", "name":"NOKIA 5200- Black", "city":"Jakarta Selatan", "province":"DKI Jakarta", "price":500000, "image":"https://s5.bukalapak.com/system2/images/5/thumb/nokia.jpg?1264040052"
+		"id":kxvi,
+		"category":"Handphone (HP)",
+		"name":"NOKIA 5200- Black",
+		"city":"Jakarta Selatan",
+		"province":"DKI Jakarta",
+		"price":2700000,
+		"image":"https://s0.bukalapak.com/system/images/1/6/7/6/6/8/0/large/IMG00475-20121105-1431.jpg?1352105447",
+		"desc":"blackberry 8520 original\r\nnot fake / KW / grade ori\r\njudge by pic\r\nmade in mexico\r\nmemory card and battery not included\r\nberrindo\r\nbought it 2009 september\r\nbox, charger, etc included",
+		"condition":"new",
+		"nego":true
+		"payment_ready":false
+		"specs":{
+			"brand":"Blackberry",
+			"operating_system":"Blackberry",
+			"features":["Wifi","Bluetooth","Memory Card Slots","MP3","Message","e-mail","Video Player","QWERT Keyboard",""],
+			"bentuk":"Klasik (Bar)",
+			"display_size":"",
+			"camera":"Camera",
+			"garansi":"Tidak bergaransi",
+			"network":"GSM",
+			"body_color":"hitam"
+		},
+		"state_description":["Stok Habis", "Melanggar"]
 	},
 	"message":null
 }
@@ -589,7 +635,7 @@ Set Product to Sold
 + [https://api.bukalapak.com/v1/products/:id/sold.json]().
 
 ##### Parameters
-+ `id` *(required)*. Identifier for product being read.
++ `id` *(required)*. Identifier for product being sold.
 
 ##### Example Request
 ```sh
@@ -616,7 +662,7 @@ Set Product to Available
 + [https://api.bukalapak.com/v1/products/:id/relist.json]().
 
 ##### Parameters
-+ `id` *(required)*. Identifier for product being read.
++ `id` *(required)*. Identifier for product being relist.
 
 ##### Example Request
 ```sh
@@ -660,3 +706,9 @@ Successfull example
 	"message": null
 }
 ```
+
+### Dictionary
+- `condition` Denote whether a product is a used item or new. Possible values **new**, **used**.
+- `payment_ready` Denote whether a product can be purchase or not. Possible values **true**, **false**.
+- `state_description` Explanation why a product can't be purchased. Possible values **Lapak Tutup**, **Stok Habis**, **Melanggar**, **Penjual Tidak Aktif**.
+- `nego` Denote whether buyer can negotiate for product price. Possible values **true**, **false**.

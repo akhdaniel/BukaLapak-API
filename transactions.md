@@ -16,6 +16,7 @@
   - [Parameters](#parameters)
   - [Example Request](#example-request)
   - [Example Response](#example-response)
+- [Dictionary](#dictionary)
 
 ## Bukalapak Transactions API
 
@@ -172,3 +173,21 @@ Successfull example
 	"message": "Konfirmasi pengiriman barang berhasil"
 }
 ```
+
+### Dictionary
+- `state` State of transactions. Possible values are as listed
+  - `pending` initial state
+  - `addressed` transaction shipping address filled
+  - `payment_chosen` payment method have been chosen
+  - `confirm_payment` transaction has been paid by buyer but not verified yet by Bukalapak
+  - `paid` transaction has been paid and payment has been verified Bukalapak
+  - `delivered` order has been shipped by seller but not received by buyer yet
+  - `received` order has been received by buyer
+  - `remitted` transaction has been finished and seller has been paid by Bukalapak
+  - `rejected` transaction has been rejected by seller
+  - `cancelled` transaction has been canceled
+  - `expired` transaction expired
+  - `refunded` transaction has been refunded
+- `actions` Actions that can be performed by current user. Possible values are
+  - `deliver` Can be performed by seller at [Confirm Shipping for Transaction](#confirm-shipping) endpoint
+  - PS: more actions to come in near future

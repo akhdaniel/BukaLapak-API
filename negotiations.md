@@ -7,19 +7,19 @@
 	- [Example Request](#example-request)
 	- [Example Response](#example-response)
 - [Accept Negotiation](#accept-negotiation)
-	- [Resource URL](#resource-url)
-	- [Parameters](#parameters)
-	- [Example Request](#example-request)
-	- [Example Response](#example-response)
+  - [Resource URL](#resource-url)
+  - [Parameters](#parameters)
+  - [Example Request](#example-request)
+  - [Example Response](#example-response)
 - [Reject Negotiation](#reject-negotiation)
-	- [Resource URL](#resource-url)
-	- [Parameters](#parameters)
-	- [Example Request](#example-request)
-	- [Example Response](#example-response)
+  - [Resource URL](#resource-url)
+  - [Parameters](#parameters)
+  - [Example Request](#example-request)
+  - [Example Response](#example-response)
 
 ## Bukalapak Negotiations API
 
-### Negotation Listing
+### Negotiation Listing
 Get list of negotiations owned by user
 
 + Use `GET` http method.
@@ -29,7 +29,7 @@ Get list of negotiations owned by user
 + [https://api.bukalapak.com/v1/negotiations.json]().
 
 ##### Parameters
-+ `page` *(optional)*. 
++ `page` *(optional)*.
 + `per_page` *(required)*.
 
 ##### Example Request
@@ -74,7 +74,7 @@ Successfull example
 }
 ```
 
-### Accept Negotation
+### Accept Negotiation
 Accept incoming negotiation
 
 + Use `PUT` http method.
@@ -137,7 +137,7 @@ Failed example
 }
 ```
 
-### Reject Negotation
+### Reject Negotiation
 Reject incoming negotiation
 
 + Use `PUT` http method.
@@ -199,6 +199,18 @@ Failed example
   "message": null
 }
 ```
+
+### Dictionary
+- `state` State of negotiation. Possible values are as listed
+  - `waiting` initial state. Negotiation newly created and waiting for seller response
+  - `accepted` negotiation has been accepted by seller
+  - `rejected` negotiation has been rejected by seller
+  - `finished` negotiation has been accepted by seller and paid by buyer
+  - `expired` negotiation has been expired
+  - 'cancelled' negotiation has been cancelled by buyer
+- `actions` Actions that can be performed by current user. Possible values are
+  - `accept` Can be performed by seller at [Accept Negotiation](#accept-negotiation) endpoint
+  - `rejected` Can be performed by seller at [Reject Negotiation](#reject-negotiation) endpoint
 
 <!--
  - [Create Negotiation](#create-negotiation)
