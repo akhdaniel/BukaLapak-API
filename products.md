@@ -62,9 +62,9 @@ Server will set `Etag` header to every request to this resource.
 + [https://api.bukalapak.com/v1/products.json?page=1&per_page=10](). First ten products.
 
 ##### Parameters
-+ `q` *(optional)*. Keywords use to search products.
++ `keywords` *(optional)*. Keywords use to search products.
 + `page` *(optional)*. Pagination page, default to `0`.
-+ `per_page` *(optional)*. Number results per_page, default to `20`.
++ `per_page` *(optional)*. Number results per_page, default to `20`. Allowed values `6, 18, 20, 40, 80`.
 
 ##### Example Request by Keywords
 ```sh
