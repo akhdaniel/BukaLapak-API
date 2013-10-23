@@ -48,7 +48,7 @@
 ## Bukalapak Products API
 
 ### List Products
-Get a number of products. If parameter `q` exist, this will give a number of products matching with keywords `q`
+Get a number of products. If parameter `keywords` exist, this will give a number of products matching with keywords `keywords`
 
 You can optionally set `If-None-Match` header or `Etag` header. If request `Etag` match, server will send `304 Not Modified` response without body.
 
@@ -58,7 +58,7 @@ Server will set `Etag` header to every request to this resource.
 
 ##### Resource URL
 + [https://api.bukalapak.com/v1/products.json](). No search parameter provided.
-+ [https://api.bukalapak.com/v1/products.json?q=mtb](). Show products match with keywords `mtb`.
++ [https://api.bukalapak.com/v1/products.json?keywords=mtb](). Show products match with keywords `mtb`.
 + [https://api.bukalapak.com/v1/products.json?page=1&per_page=10](). First ten products.
 
 ##### Parameters
