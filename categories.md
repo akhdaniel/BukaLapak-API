@@ -38,45 +38,57 @@ curl -u 67287:lXymG93y83m6RHzZV5FY https://api.bukalapak.com/v1/categories.json
 ##### Example Response
 ````json
 {
-  "status":"OK",
-  "categories":{
-    "Sepeda":{
-      "83":"Sepeda MTB",
-      "96":"Helm & Body Protection",
-      "Drivetrain":{
-        "88":"Crank",
-        "259":"Rantai"
-      },
-      "138":"Part Generic",
-      "Outwear":{
-        "279":"Gogle",
-        "280":"Tas"
-      }
-    },
-    "HP & Elektronik":{
-      "Handphone (HP)":{
-        "105":"Blackberry",
-        "Android":{
-          "147":"Samsung",
-          "150":"LG",
-          "151":"Lain-lain"
+  "status": "OK",
+  "categories": [
+    {
+      "id": 64,
+      "name": "Sepeda",
+      "children": [
+        {
+          "id": 242,
+          "name": "Fullbike",
+          "children": [
+            {
+              "id": 370,
+              "name": "MTB"
+            },
+            {
+              "id": 371,
+              "name": "Roadbike"
+            }
+          ]
         },
-        "154":"Lain-lain"
-      },
-      "Kamera":{
-        "119":"SLR Fullset",
-        "199":"Others"
-      }
+        {
+          "id": 85,
+          "name": "Frame",
+          "children": [
+            {
+              "id": 372,
+              "name": "MTB"
+            },
+            {
+              "id": 373,
+              "name": "Roadbike"
+            }
+          ]
+        }
+      ]
     },
-    "Properti":{
-      "74":"Rumah",
-      "75":"Apartemen",
-      "76":"Ruko",
-      "77":"Kamar & Kos",
-      "78":"Tanah"
-    }
-  },
-  "message":null
+    {
+      "id": 10,
+      "name": "Kamera",
+      "children": [
+        {
+          "id": 186,
+          "name": "Kamera Digital"
+        },
+        {
+          "id": 350,
+          "name": "Kamera Analog"
+        }
+      ]
+    },
+  ]
 }
 ````
 
