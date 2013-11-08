@@ -48,7 +48,7 @@ None
 
 ##### Example Request
 ````sh
-curl -u 67287:lXymG93y83m6RHzZV5FY https://api.bukalapak.com/v1/messages.json
+curl -u 67287:lXymG93y83m6RHzZV5FY https://api.bukalapak.com/v1/messages.json?page=1
 ````
 
 ##### Example Response
