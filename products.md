@@ -65,6 +65,7 @@ Server will set `Etag` header to every request to this resource.
 + `keywords` *(optional)*. Keywords use to search products.
 + `page` *(optional)*. Pagination page, default to `0`.
 + `per_page` *(optional)*. Number results per_page, default to `20`. Allowed values `6, 18, 20, 40, 80`.
++ `nego` & `harga_pas` *(optional)*. If searching for negotiable products, set `nego` to `1` and `harga_pas` to `0`. If searching for non-negotiable products, set `nego` to `0` and `harga_pas` to `1`. If given the same values, search result returns both negotiable and non-negotiable products.
 
 ##### Example Request by Keywords
 ```sh
