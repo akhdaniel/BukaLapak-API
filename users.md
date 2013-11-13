@@ -52,7 +52,7 @@ Success response:
 }
 ````
 
-### User Feeback
+### User Feebacks
 Get feedback listing for current user
 + Use `GET` http method
 + Requires authentication
