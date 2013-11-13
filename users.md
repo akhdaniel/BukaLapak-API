@@ -49,11 +49,11 @@ Success response:
 
 ##### Example Request for Feedbacks
 ````sh
-curl -u 15:wcrG8WPPWaq9Ndiesbjn https://api.bukalapak.com/v1/users/15/feedback.json?page=2&per_page=5&seller=1
+curl -u 15:wcrG8WPPWaq9Ndiesbjn https://api.bukalapak.com/v1/users/15/feedbacks.json?page=2&per_page=5&seller=1
 
 ````
 
-URL format: `https://api.bukalapak.com/v1/users/:id/feedback.json`
+URL format: `https://api.bukalapak.com/v1/users/:id/feedbacks.json`
 Parameters:
 + `:id` *(required)*. User ID of target user.
 + `page` *(optional)*. Page to be displayed. Default is `1`.
