@@ -30,7 +30,7 @@ Get list of negotiations owned by user
 
 ##### Parameters
 + `page` *(optional)*.
-+ `per_page` *(required)*.
++ `per_page` *(optional)*.
 
 ##### Example Request
 ```sh

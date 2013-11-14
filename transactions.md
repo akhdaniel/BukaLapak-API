@@ -16,6 +16,11 @@
   - [Parameters](#parameters)
   - [Example Request](#example-request)
   - [Example Response](#example-response)
+- [Send Feeback as Seller](#send-feedback)
+  - [Resource URL](#resource-url)
+  - [Parameters](#parameters)
+  - [Example Request](#example-request)
+  - [Example Response](#example-response)
 - [Dictionary](#dictionary)
 
 ## Bukalapak Transactions API
@@ -161,16 +166,65 @@ Failed example
 ```json
 {
   "status":"ERROR",
-	"id":null,
-	"message": "Belum ada konfirmasi pembayaran atau konfirmasi pengiriman barang sudah dilakukan"
+  "id":null,
+  "message": "Belum ada konfirmasi pembayaran atau konfirmasi pengiriman barang sudah dilakukan"
 }
 ```
 Successfull example
 ```json
 {
-	"status":"OK",
-	"id":"1315",
-	"message": "Konfirmasi pengiriman barang berhasil"
+  "status":"OK",
+  "id":"1315",
+  "message": "Konfirmasi pengiriman barang berhasil"
+}
+```
+
+### Send Feedback
+Send Feeback as Seller
+
++ Use `POST` http method.
++ Requires authentication
+
+##### Resource URL
++ [https://api.bukalapak.com/v1/transactions/:id/feedbacks.json]().
+
+##### Parameters
+None
+
+##### POST request data
++ `feedback` *(required)*. Attributes of feedback. Attributes constructed by following fields:
+  + `body` *(required)*. Text containing feedback for current transaction
+  + `positive` *(required)*. Boolean value indicating seller's satisfaction toward buyer of current transaction. Possible values are `true` or `false`
+
+##### Example Request
+```sh
+curl -u 67287:lXymG93y83m6RHzZV5FY -d '{ "feedback": { "body":"Puas dengan pembeli ini. Tidak rewel dan fast response.", "positive":"true"  } }' https://api.bukalapak.com/v1/transactions/7907/feedbacks.json -H "Content-Type: application/json" -X POST
+```
+
+##### Example Response
+Failed example
+```json
+{
+  "status": "ERROR",
+  "message": "Transaksi tidak terdaftar atau feedback sudah diberikan",
+  "feedback": {}
+}
+```
+Successfull example
+```json
+{
+  "status": "OK",
+  "message": null,
+  "feedback": {
+    "id": 22033,
+    "transaction_id": 7907,
+    "sender_id": 62817,
+    "sender_name": "Sayur Kangkung",
+    "user_id": 31432,
+    "user_name": "Khairul",
+    "body": "Mantap gan",
+    "positive": true
+  }
 }
 ```
 
