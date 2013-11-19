@@ -11,6 +11,7 @@
     - [Parameters](#parameters)
     - [Example Request](#example-request)
     - [Example Response](#example-response)
+- [Dictionary](#dictionary)
 
 ## Bukalapak Product Category API
 
@@ -146,3 +147,11 @@ curl -u 67287:lXymG93y83m6RHzZV5FY https://api.bukalapak.com/v1/categories/242/a
   "message":null
 }
 ````
+
+### Dictionary
+- `inputType` Type of input. *No shit Sherlock*. Possible value are
+    - `string`, equivalent to `input` type `text` tag in html
+    - `text`, equivalnet to `textarea`
+    - `select`, `combo_select`, equivalent to `select`
+    - `boolean`, `check_boxes`, equivalent to `input` type `checkbox`
+    - `radio_buttons`, equivalent to `input` type `radio`
