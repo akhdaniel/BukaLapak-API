@@ -87,7 +87,9 @@ Success response:
       "user_id": 62817,
       "user_name": "Sayur Kangkung",
       "body": "Pembeli yang baik. Tidak rewel dan responsive",
-      "positive": true
+      "positive": true,
+      "created_at":"2012-10-11T17:55:34+07:00",
+      "updated_at":"2012-10-11T17:55:34+07:00"
     },
     {
       "id": 22031,
@@ -97,7 +99,9 @@ Success response:
       "user_id": 62817,
       "user_name": "Sayur Kangkung",
       "body": "Recommended buyer. Ga banyak tanya :). Bayar sesuai harga dan cepat tanggap.",
-      "positive": true
+      "positive": true,
+      "created_at":"2012-10-11T17:55:34+07:00",
+      "updated_at":"2012-10-11T17:55:34+07:00"
     }
   ]
 }

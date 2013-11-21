@@ -223,7 +223,9 @@ Successfull example
     "user_id": 31432,
     "user_name": "Khairul",
     "body": "Mantap gan",
-    "positive": true
+    "positive": true,
+    "created_at":"2012-10-11T17:55:34+07:00",
+    "updated_at":"2012-10-11T17:55:34+07:00"
   }
 }
 ```
