@@ -121,7 +121,7 @@ failed:
 {
   "status":"OK",
   "withdrawal_id":4,
-  "message":"Withdrawal request failed, withdrawal request can only be made once per day"
+  "message":"Pencairan hanya bisa dilakukan satu kali sehari."
 }
 
 ````
