@@ -1,12 +1,12 @@
 ### [&laquo; Home](README.md)
 
 [Authentication for Bukalapak API](#authentication-for-bukalapak-api)
+[Registration via Bukalapak API](#registration-via-bukalapak-api)
 - [Authenticate](#authenticate)
     - [URL](#url)
     - [Parameters](#parameters)
     - [Example Request](#example-request)
     - [Example Response](#example-response)
-[Registration via Bukalapak API](#registration-via-bukalapak-api)
 - [Register](#register)
     - [URL](#url)
     - [Parameters](#parameters)
