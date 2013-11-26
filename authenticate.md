@@ -74,7 +74,7 @@ None
 + `user[birthday(2i)]` *(optional)*. Month of birth. Use together with `user[birthday(3i)]` and `user[birthday(1i)]`
 + `user[birthday(1i)]` *(optional)*. Year of birth. Use together with `user[birthday(3i)]` and `user[birthday(2i)]`
 + `user[password]` *(required)*. Password.
-+ `user[password_confirmation] *(required)*. Password confirmation.
++ `user[password_confirmation]` *(required)*. Password confirmation.
 + `user[phone]` *(optional)*. User's phone number.
 + `user[address_attributes][province]` *(optional)*. User's province. Use together with other `address_attributes` data.
 + `user[address_attributes][city]` *(optional)*. User's city. Use together with other `address_attributes` data.
