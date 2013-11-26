@@ -1,7 +1,6 @@
 ### [&laquo; Home](README.md)
 
 [Authentication for Bukalapak API](#authentication-for-bukalapak-api)
-[Registration via Bukalapak API](#registration-via-bukalapak-api)
 - [Authenticate](#authenticate)
     - [URL](#url)
     - [Parameters](#parameters)
@@ -55,8 +54,6 @@ Failed response
   "message":"Invalid password"
 }
 ````
-
-## Registration via Bukalapak API
 
 ### Register
 Return token after registration to enable access for `required authentication's resources`
