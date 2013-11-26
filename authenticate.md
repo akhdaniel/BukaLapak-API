@@ -6,7 +6,7 @@
     - [Parameters](#parameters)
     - [Example Request](#example-request)
     - [Example Response](#example-response)
-- [Registration via Bukalapak API](#registration-via-bukalapak-api)
+[Registration via Bukalapak API](#registration-via-bukalapak-api)
 - [Register](#register)
     - [URL](#url)
     - [Parameters](#parameters)
