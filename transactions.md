@@ -39,7 +39,6 @@ Server will set `Etag` header to every request to this resource.
 + [https://api.bukalapak.com/v1/transactions.json?page=2&per_page=10](). `page` and `per_page` provided.
 
 ##### Parameters
-+ `page` *(optional)*. Keywords use to search products.
 + `page` *(optional)*. Page number, default to `0`.
 + `per_page` *(optional)*. Number of transactions `per_page`, default to `10`.
 
