@@ -16,7 +16,7 @@
   - [Parameters](#parameters)
   - [Example Request](#example-request)
   - [Example Response](#example-response)
-- [Send Feeback as Seller](#send-feedback)
+- [Send Feeback](#send-feedback)
   - [Resource URL](#resource-url)
   - [Parameters](#parameters)
   - [Example Request](#example-request)
@@ -180,7 +180,7 @@ Successfull example
 ```
 
 ### Send Feedback
-Send Feeback as Seller
+Send Feeback to seller/buyer after transaction.
 
 + Use `POST` http method.
 + Requires authentication
