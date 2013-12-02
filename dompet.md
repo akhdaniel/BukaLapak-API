@@ -33,7 +33,7 @@ Get current user's mutation history.
 
 ##### Example Request
 ````sh
-curl -u 204254:Sy7PRGGr4foUk22uzjMu "http://api.local.host:3000/v1/dompet/history/mutations.json?page=1&per_page=1"
+curl -u 204254:Sy7PRGGr4foUk22uzjMu "https://api.bukalapak.com/v1/dompet/history/mutations.json?page=1&per_page=1"
 
 ````
 
@@ -68,7 +68,7 @@ Get current user's withdrawal history.
 
 ##### Example Request
 ````sh
-curl -u 204254:Sy7PRGGr4foUk22uzjMu "http://api.local.host:3000/v1/dompet/history/withdrawals.json?page=1&per_page=1"
+curl -u 204254:Sy7PRGGr4foUk22uzjMu "https://api.bukalapak.com/v1/dompet/history/withdrawals.json?page=1&per_page=1"
 
 ````
 
@@ -104,7 +104,7 @@ Make withdrawal request for current user.
 
 ##### Example Request
 ````sh
-curl -u 204254:Sy7PRGGr4foUk22uzjMu -X POST "http://api.local.host:3000/v1/dompet/withdraw.json" --data "deposit_withdrawal[amount]=25000&deposit_withdrawal[bank_account_id]=41812&deposit_withdrawal[password]=testing1234"
+curl -u 204254:Sy7PRGGr4foUk22uzjMu -X POST "https://api.bukalapak.com/v1/dompet/withdraw.json" --data "deposit_withdrawal[amount]=25000&deposit_withdrawal[bank_account_id]=41812&deposit_withdrawal[password]=testing1234"
 
 ````
 
