@@ -59,7 +59,7 @@ curl -u 67287:lXymG93y83m6RHzZV5FY "https://api.bukalapak.com/v1/transactions.js
     "shipping_fee":9000,
     "total_amount":2349000,
     "product":{
-      "name":"Kamara", "url":"https://www.bukalapak.com/p/kamera/kamera-digital/gglw_-kamara"
+      "name":"Kamara", "url":"https://www.bukalapak.com/p/kamera/kamera-digital/gglw_-kamara", "price":2340000, "description":"Kamera digital Kamara."
     },
     "buyer":{
       "id":31432, "name":"Khairul", "username":"kahirul"
@@ -77,7 +77,7 @@ curl -u 67287:lXymG93y83m6RHzZV5FY "https://api.bukalapak.com/v1/transactions.js
     "shipping_fee":9000,
     "total_amount":159000,
     "product":{
-      "name":"pre order Haunted Trail Shirt","url":"https://www.bukalapak.com/p/fashion/men/t-shirt-165/gglu_-pre-order-haunted-trail-shirt"
+      "name":"pre order Haunted Trail Shirt","url":"https://www.bukalapak.com/p/fashion/men/t-shirt-165/gglu_-pre-order-haunted-trail-shirt", "price":150000, "description":"T-Shirt keren."
     },
     "buyer":{
       "id":31432,"name":"Khairul","username":"kahirul"
@@ -123,7 +123,7 @@ curl -u 67287:lXymG93y83m6RHzZV5FY "https://api.bukalapak.com/v1/transactions/78
     "shipping_fee":9000,
     "total_amount":2349000,
     "product":{
-      "name":"Kamara", "url":"https://www.bukalapak.com/p/kamera/kamera-digital/gglw_-kamara"
+      "name":"Kamara", "url":"https://www.bukalapak.com/p/kamera/kamera-digital/gglw_-kamara", "price":2340000, "description":"Kamera digital Kamara."
     },
     "buyer":{
       "id":31432, "name":"Khairul", "username":"kahirul"
