@@ -203,7 +203,7 @@ None
 
 ##### Example Request
 ```sh
-curl -u 204254:Sy7PRGGr4foUk22uzjMu -X PUT "https://www.bukalapak.com/v1/transactions/reject.json" --data "id=51943&payment_rejection[reason]=Stok habis"
+curl -u 204254:Sy7PRGGr4foUk22uzjMu -X PUT "https://api.bukalapak.com/v1/transactions/reject.json" --data "id=51943&payment_rejection[reason]=Stok habis"
 ```
 
 ##### Example Response
