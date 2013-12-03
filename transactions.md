@@ -196,10 +196,8 @@ Reject Transaction
 None
 
 ##### PUT request data
-+ `payment_shipping` *(required)*. Attributes of transaction shipping confirmation in JSON. Attributes constructed by following fields:
-  + `transaction_id` *(required)*. Transaction ID
-  + `shipping_code` *(required)*. Shipping receipt code
-  + `new_courier` *(optional)*. Used if courier used other than JNE, TIKI, or POS
++ `id` *(required)*. Transaction ID.
++ `payment_rejection[reason]` *(required)*. Reason for rejecting transaction.
 
 ##### Example Request
 ```sh
