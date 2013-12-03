@@ -44,7 +44,8 @@ Get current user's inbox
 + [https://api.bukalapak.com/v1/messages.json]().
 
 ##### Parameters
-None
++ `page` *(optional)*. Default to `1`
++ `per_page` *(optional)*. Default to `10`
 
 ##### Example Request
 ````sh
