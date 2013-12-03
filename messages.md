@@ -168,9 +168,20 @@ curl -u 67287:lXymG93y83m6RHzZV5FY https://api.bukalapak.com/v1/messages/im/516e
 ##### Example Response
 ````json
 {
-	"status":"OK",
-	"instant_message":{"_id":"516e2565177961034c000002","attachment_id":0,"body":"tesssss","body_bb":"tesssss","category":0,"created_at":"2013-04-17T11:30:29+07:00","inbox_id":"516d3299425762188f000011","product_id":null,"read":true,"receiver_id":"110675","receiver_name":"Phillip Leonardo","removed":false,"sender_id":"110677","sender_name":"Testa B","updated_at":"2013-04-17T11:30:29+07:00"},
-	"message":null
+    "status": "OK",
+    "instant_message": {
+        "id": "524673ca318b27602f00000a",
+        "body": "Halo Sayur Kangkung,\n\nKami telah memblokir lapakmu untuk barang:\n<strong>[DT] WIMCYCLE ADRENALINE DH TEAM 2012 - SIZE M</strong>\nSeharga: Rp 125.000\nKondisi barang: Bekas\n\nBarang diblokir karena alasan berikut ini:\n- Harga tidak sesuai\n\nJika kamu ingin mengaktifkan kembali lapakmu, kami minta kerjasama kamu untuk memperbaikinya. Kamu bisa langsung memperbaiki dengan klik http://www.local.host:3000/products/ggm8-jual-dt-wimcycle-adrenaline-dh-team-2012-size-m/edit.\n\nTerima kasih atas perhatian & kerjasama Kamu.\n\n",
+        "created_at": "2013-09-28T13:14:34+07:00",
+        "inbox_id": "524673c9318b27602f000009",
+        "read": true,
+        "receiver_id": "62817",
+        "receiver_name": "Sayur Kangkung",
+        "sender_id": "225448",
+        "sender_name": "roni hafid",
+        "updated_at": "2013-12-03T18:39:41+07:00"
+    },
+    "message": null
 }
 ````
 
