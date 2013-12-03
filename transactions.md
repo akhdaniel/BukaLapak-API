@@ -143,7 +143,7 @@ curl -u 67287:lXymG93y83m6RHzZV5FY "https://api.bukalapak.com/v1/transactions/78
       "url":"https://www.bukalapak.com/p/kamera/kamera-digital/gglw_-kamara",
       "price":2340000,
       "description":"Kamera digital Kamara.",
-      "image":"https://s1.bukalapak.com/system/images/2/6/0/0/3/5/9/original/Screenshot_-_111113_-_15_47_03.png?1384836182"
+      "image":"https://s1.bukalapak.com/system/images/2/6/0/0/3/5/9/original/15_47_03.png?1384836182"
     },
     "buyer":{
       "id":31432, "name":"Khairul", "username":"kahirul"
