@@ -16,7 +16,7 @@
   - [Parameters](#parameters)
   - [Example Request](#example-request)
   - [Example Response](#example-response)
-- [Reject Transaction] (#reject-transction)
+- [Reject Transaction] (#reject-transaction)
   - [Resource URL](#resource-url)
   - [Parameters](#parameters)
   - [Example Request](#example-request)
@@ -183,8 +183,8 @@ Successfull example
 }
 ```
 
-### Confirm Shipping
-Confirm Shipping for Transaction
+### Reject Transaction
+Reject Transaction
 
 + Use `PUT` http method.
 + Requires authentication
