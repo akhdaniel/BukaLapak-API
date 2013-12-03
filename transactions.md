@@ -57,50 +57,52 @@ curl -u 67287:lXymG93y83m6RHzZV5FY "https://api.bukalapak.com/v1/transactions.js
 {
   "status":"OK",
   "transactions":[{
-    "id":7870,
-    "state":"remitted",
-    "transaction_id":"130429230001",
-    "amount":2340000,
-    "shipping_fee":9000,
-    "total_amount":2349000,
-    "product":{
-      "id":1069174,
-      "name":"Kamara",
-      "url":"https://www.bukalapak.com/p/kamera/kamera-digital/gglw_-kamara",
-      "price":2340000,
-      "description":"Kamera digital Kamara.",
-      "image":"https://s1.bukalapak.com/system/images/2/6/0/0/3/5/9/original/15_47_03.png?1384836182"
-    },
-    "buyer":{
-      "id":31432, "name":"Khairul", "username":"kahirul"
-    },
-    "seller":{
-      "id":62817, "name":"Sayur Kangkung", "username":"sayurkangkung"
-    },
-    "actions":[]
-  },
-  {
-    "id":7858,
+    "id":51947,
     "state":"paid",
-    "transaction_id":"130322140001",
-    "amount":150000,
-    "shipping_fee":9000,
-    "total_amount":159000,
-    "product":{
-      "id":1069199,
-      "name":"pre order Haunted Trail Shirt",
-      "url":"https://www.bukalapak.com/p/fashion/men/t-shirt-165/gglu_-pre-order-haunted-trail-shirt",
-      "price":150000,
-      "description":"T-Shirt keren.",
-      "image":"https://s1.bukalapak.com/system/images/2/6/0/0/3/5/9/original/8723.png?1384836182"
+    "transaction_id":"131203161947",
+    "amount":20000,"quantity":1,
+    "shipping_fee":8000,
+    "total_amount":28000,
+    "products":[{
+      "id":"mwza",
+      "category":"Buku",
+      "category_id":60,
+      "category_structure":["Hobi & Hiburan","Buku"],
+      "name":"Buku Palsu",
+      "city":"Jakarta Barat",
+      "province":"DKI Jakarta",
+      "price":20000,"weight":"1000",
+      "images":["http://www.local.host:3000/system/images/2/6/0/0/3/5/9/large/Screenshot_-_111113_-_15_47_03.png?1384836182"],
+      "small_images":["http://www.local.host:3000/system/images/2/6/0/0/3/5/9/small/Screenshot_-_111113_-_15_47_03.png?1384836182"],
+      "url":"http://www.local.host:3000/p/hobi-hiburan/buku/mwza-jual-buku-palsu",
+      "desc":"asdasd",
+      "condition":"new",
+      "nego":false,
+      "seller_name":"Liem Lie Wie",
+      "payment_ready":true,
+      "stock":49999,
+      "specs":{"type":null},
+      "state_description":[]
+    }],
+    "consignee":{
+      "name":"Testing Account",
+      "address":"adasd",
+      "city":"Tangerang",
+      "province":"Banten",
+      "post_code":"12312"
     },
     "buyer":{
-      "id":31432,"name":"Khairul","username":"kahirul"
+      "id":204254,
+      "name":"Testing Account",
+      "username":"testingaccount"
     },
     "seller":{
-      "id":62817,"name":"Sayur Kangkung","username":"sayurkangkung"
+      "id":52357,
+      "name":"Liem Lie Wie",
+      "username":"ebenhaezernet"
     },
-    "actions":["deliver","reject"]
+    "actions":["deliver","reject"],
+    "created_at":"2013-12-03T16:15:40+07:00"
   }]
   ,"message":null
 }
@@ -131,27 +133,52 @@ curl -u 67287:lXymG93y83m6RHzZV5FY "https://api.bukalapak.com/v1/transactions/78
 {
   "status":"OK",
   "transactions":{
-    "id":7870,
-    "state":"remitted",
-    "transaction_id":"130429230001",
-    "amount":2340000,
-    "shipping_fee":9000,
-    "total_amount":2349000,
-    "product":{
-      "id":1069174,
-      "name":"Kamara",
-      "url":"https://www.bukalapak.com/p/kamera/kamera-digital/gglw_-kamara",
-      "price":2340000,
-      "description":"Kamera digital Kamara.",
-      "image":"https://s1.bukalapak.com/system/images/2/6/0/0/3/5/9/original/15_47_03.png?1384836182"
+    "id":51947,
+    "state":"paid",
+    "transaction_id":"131203161947",
+    "amount":20000,"quantity":1,
+    "shipping_fee":8000,
+    "total_amount":28000,
+    "products":[{
+      "id":"mwza",
+      "category":"Buku",
+      "category_id":60,
+      "category_structure":["Hobi & Hiburan","Buku"],
+      "name":"Buku Palsu",
+      "city":"Jakarta Barat",
+      "province":"DKI Jakarta",
+      "price":20000,"weight":"1000",
+      "images":["http://www.local.host:3000/system/images/2/6/0/0/3/5/9/large/Screenshot_-_111113_-_15_47_03.png?1384836182"],
+      "small_images":["http://www.local.host:3000/system/images/2/6/0/0/3/5/9/small/Screenshot_-_111113_-_15_47_03.png?1384836182"],
+      "url":"http://www.local.host:3000/p/hobi-hiburan/buku/mwza-jual-buku-palsu",
+      "desc":"asdasd",
+      "condition":"new",
+      "nego":false,
+      "seller_name":"Liem Lie Wie",
+      "payment_ready":true,
+      "stock":49999,
+      "specs":{"type":null},
+      "state_description":[]
+    }],
+    "consignee":{
+      "name":"Testing Account",
+      "address":"adasd",
+      "city":"Tangerang",
+      "province":"Banten",
+      "post_code":"12312"
     },
     "buyer":{
-      "id":31432, "name":"Khairul", "username":"kahirul"
+      "id":204254,
+      "name":"Testing Account",
+      "username":"testingaccount"
     },
     "seller":{
-      "id":62817, "name":"Sayur Kangkung", "username":"sayurkangkung"
+      "id":52357,
+      "name":"Liem Lie Wie",
+      "username":"ebenhaezernet"
     },
-    "actions":[]
+    "actions":["deliver","reject"],
+    "created_at":"2013-12-03T16:15:40+07:00"
   }
   ,"message":null
 }
