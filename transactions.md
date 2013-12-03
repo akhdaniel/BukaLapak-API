@@ -64,7 +64,7 @@ curl -u 67287:lXymG93y83m6RHzZV5FY "https://api.bukalapak.com/v1/transactions.js
     "shipping_fee":8000,
     "total_amount":28000,
     "products":[{
-      "id":"mwza",
+      "id":1069174,
       "category":"Buku",
       "category_id":60,
       "category_structure":["Hobi & Hiburan","Buku"],
@@ -140,7 +140,7 @@ curl -u 67287:lXymG93y83m6RHzZV5FY "https://api.bukalapak.com/v1/transactions/78
     "shipping_fee":8000,
     "total_amount":28000,
     "products":[{
-      "id":"mwza",
+      "id":1069174,
       "category":"Buku",
       "category_id":60,
       "category_structure":["Hobi & Hiburan","Buku"],
