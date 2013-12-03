@@ -16,6 +16,11 @@
   - [Parameters](#parameters)
   - [Example Request](#example-request)
   - [Example Response](#example-response)
+- [Reject Transaction] (#reject-transction)
+  - [Resource URL](#resource-url)
+  - [Parameters](#parameters)
+  - [Example Request](#example-request)
+  - [Example Response](#example-response)
 - [Send Feeback](#send-feedback)
   - [Resource URL](#resource-url)
   - [Parameters](#parameters)
@@ -175,6 +180,45 @@ Successfull example
   "status":"OK",
   "id":"1315",
   "message": "Konfirmasi pengiriman barang berhasil"
+}
+```
+
+### Confirm Shipping
+Confirm Shipping for Transaction
+
++ Use `PUT` http method.
++ Requires authentication
+
+##### Resource URL
++ [https://api.bukalapak.com/v1/transactions/reject.json]().
+
+##### Parameters
+None
+
+##### PUT request data
++ `payment_shipping` *(required)*. Attributes of transaction shipping confirmation in JSON. Attributes constructed by following fields:
+  + `transaction_id` *(required)*. Transaction ID
+  + `shipping_code` *(required)*. Shipping receipt code
+  + `new_courier` *(optional)*. Used if courier used other than JNE, TIKI, or POS
+
+##### Example Request
+```sh
+curl -u 204254:Sy7PRGGr4foUk22uzjMu -X PUT "https://www.bukalapak.com/v1/transactions/reject.json" --data "id=51943&payment_rejection[reason]=Stok habis"
+```
+
+##### Example Response
+Failed example
+```json
+{
+  "status":"OK",
+  "message":"Failed to reject"
+}
+```
+Successfull example
+```json
+{
+  "status":"OK",
+  "message":"Successfully rejected"
 }
 ```
 
