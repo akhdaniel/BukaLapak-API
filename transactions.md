@@ -100,7 +100,7 @@ curl -u 67287:lXymG93y83m6RHzZV5FY "https://api.bukalapak.com/v1/transactions.js
     "seller":{
       "id":62817,"name":"Sayur Kangkung","username":"sayurkangkung"
     },
-    "actions":["deliver"]
+    "actions":["deliver","reject"]
   }]
   ,"message":null
 }
@@ -302,4 +302,5 @@ Successfull example
   - `refunded` transaction has been refunded
 - `actions` Actions that can be performed by current user. Possible values are
   - `deliver` Can be performed by seller at [Confirm Shipping for Transaction](#confirm-shipping) endpoint
+  - `reject` Can be performed by seller at [Reject Transaction](#reject-transaction) endpoint
   - PS: more actions to come in near future
