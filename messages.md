@@ -55,9 +55,46 @@ curl -u 67287:lXymG93y83m6RHzZV5FY https://api.bukalapak.com/v1/messages.json?pa
 ##### Example Response
 ````json
 {
-	"status":"OK",
-	"unread":0,
-	"inbox":[{"id":"518d0d42318b276640000009","updated_at":"2013-07-04T11:47:35+07:00","partner_id":"6","partner_name":"Administrator","user_id":"15","user_name":"Me Ow"},{"id":"515417c4318b273063000014","updated_at":"2013-04-18T23:01:18+07:00","partner_id":"46688","partner_name":"Cust.Service BukaLapak ","user_id":"15","user_name":"Me Ow"}]
+    "status": "OK",
+    "unread": 0,
+    "inbox": [
+        {
+            "id": "520e0474e42b5658ab00001c",
+            "updated_at": "2013-12-03T08:54:49+07:00",
+            "partner_id": "155905",
+            "partner_name": "Zakka Fauzan Muhammad",
+            "user_id": "62817",
+            "user_name": "Sayur Kangkung",
+            "last_message": "sip diterima san..."
+        },
+        {
+            "id": "5125950c948f5c1a05000662",
+            "updated_at": "2013-12-02T21:50:51+07:00",
+            "partner_id": "39435",
+            "partner_name": "Cecep",
+            "user_id": "62817",
+            "user_name": "Sayur Kangkung",
+            "last_message": "ok"
+        },
+        {
+            "id": "516ffb155ff21f7b53000178",
+            "updated_at": "2013-12-02T11:26:03+07:00",
+            "partner_id": "78285",
+            "partner_name": "Khairul",
+            "user_id": "62817",
+            "user_name": "Sayur Kangkung",
+            "last_message": "kung"
+        },
+        {
+            "id": "4ffab90e5ff21f447e000004",
+            "updated_at": "2013-07-28T17:05:40+07:00",
+            "partner_id": "57451",
+            "partner_name": "Renjay Shop",
+            "user_id": "62817",
+            "user_name": "Sayur Kangkung",
+            "last_message": "testing..."
+        }
+    ]
 }
 ````
 
