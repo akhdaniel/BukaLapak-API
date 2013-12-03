@@ -107,19 +107,45 @@ Get current user's selected conversation
 + [https://api.bukalapak.com/v1/messages/:id.json]().
 
 ##### Parameters
-None
++ `page` *(optional)*. Default to `1`
++ `per_page` *(optional)*. Default to `10`
 
 ##### Example Request
 ````sh
-curl -u 67287:lXymG93y83m6RHzZV5FY https://api.bukalapak.com/v1/messages/516d3299425762188f000011.json
+curl -u 67287:lXymG93y83m6RHzZV5FY https://api.bukalapak.com/v1/messages/516d3299425762188f000011.json?per_page=5
 ````
 
 ##### Example Response
 ````json
 {
-	"status":"OK",
-	"instant_messages":[{"_id":"516e2565177961034c000002","attachment_id":0,"body":"tesssss","body_bb":"tesssss","category":0,"created_at":"2013-04-17T11:30:29+07:00","inbox_id":"516d3299425762188f000011","product_id":null,"read":true,"receiver_id":"110675","receiver_name":"Phillip Leonardo","removed":false,"sender_id":"110677","sender_name":"Testa B","updated_at":"2013-04-17T11:30:29+07:00"}],
-	"message":null
+    "status": "OK",
+    "instant_messages": [
+        {
+            "id": "529c0bdb521fb0dc4500025e",
+            "body": "kung",
+            "created_at": "2013-12-02T11:26:03+07:00",
+            "inbox_id": "516ffb155ff21f7b53000178",
+            "read": true,
+            "receiver_id": "78285",
+            "receiver_name": "Khairul",
+            "sender_id": "62817",
+            "sender_name": "Sayur Kangkung",
+            "updated_at": "2013-12-02T11:26:03+07:00"
+        },
+        {
+            "id": "529c0b01e42b565bfb00047a",
+            "body": "kung",
+            "created_at": "2013-12-02T11:22:25+07:00",
+            "inbox_id": "516ffb155ff21f7b53000178",
+            "read": true,
+            "receiver_id": "78285",
+            "receiver_name": "Khairul",
+            "sender_id": "62817",
+            "sender_name": "Sayur Kangkung",
+            "updated_at": "2013-12-02T11:22:25+07:00"
+        }
+    ],
+    "message": null
 }
 ````
 
