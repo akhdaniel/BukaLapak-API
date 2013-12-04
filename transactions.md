@@ -239,7 +239,11 @@ None
 
 ##### PUT request data
 + `id` *(required)*. Transaction ID.
-+ `payment_rejection[reason]` *(required)*. Reason for rejecting transaction.
++ `payment_rejection[reason]` *(required)*. Reason for rejecting transaction. Allowed values (case sensitive):
+  + `Stok Habis`
+  + `Harga barang/biaya kirim tidak sesuai`
+  + `Ada kesibukan lain yang sifatnya mendadak`
+  + `Permintaan pembeli tidak dapat dilayani`
 
 ##### Example Request
 ```sh
