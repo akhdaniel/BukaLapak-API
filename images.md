@@ -99,14 +99,14 @@ Delete image.
 + Use `DELETE` http method.
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/images/delete/:id.json]()
++ [https://api.bukalapak.com/v1/images/:id.json]()
 
 ##### Parameters
 + `id` *(required)*. Image identifier.
 
 ##### Example Request
 ````sh
-curl -u 15:wcrG8WPPWaq9Ndiesbjn https://api.bukalapak.com/v1/images/delete/181244.json
+curl -u 15:wcrG8WPPWaq9Ndiesbjn -X DELETE https://api.bukalapak.com/v1/images/181244.json
 
 ````
 
