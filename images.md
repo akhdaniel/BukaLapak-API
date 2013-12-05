@@ -13,6 +13,12 @@
     - [Example Request](#example-request)
     - [Example Response](#example-response)
 
+- [Delete Image](#delete-image)
+    - [Resource URL](#resource-url)
+    - [Parameters](#parameters)
+    - [Example Request](#example-request)
+    - [Example Response](#example-response)
+
 ## Bukalapak Image API
 
 ### Create Image
@@ -85,5 +91,49 @@ Response for image that has been assigned to product.
   "status":"ERROR",
   "user_id":1838301,
   "message":"Assigned"
+}
+````
+
+### Delete Image
+Delete image.
++ Use `DELETE` http method.
+
+##### Resource URL
++ [https://api.bukalapak.com/v1/images/delete/:id.json]()
+
+##### Parameters
++ `id` *(required)*. Image identifier.
+
+##### Example Request
+````sh
+curl -u 15:wcrG8WPPWaq9Ndiesbjn https://api.bukalapak.com/v1/images/delete/181244.json
+
+````
+
+##### Example Response
+Response when deleting image:
+````json
+{
+  "status":"OK",
+  "id":1838301,
+  "message":"Image deleted"
+}
+````
+
+Response for nonexistent image.
+````json
+{
+  "status":"ERROR",
+  "user_id":1838301,
+  "message":"Failed to delete image"
+}
+````
+
+Response when trying to delete another user's image.
+````json
+{
+  "status":"ERROR",
+  "user_id":1838301,
+  "message":"Can't delete another user's image"
 }
 ````
