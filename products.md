@@ -422,6 +422,7 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 		  "city":"Jakarta Selatan",
 		  "province":"DKI Jakarta",
 		  "price":1250000,
+		  "image_ids":[123132]
 		  "images":["https://s1.bukalapak.com/system/images/2/5/3/2/7/3/6/large/IMG_0205.JPG?1371219033"],
 		  "small_images":["https://s1.bukalapak.com/system/images/2/5/3/2/7/3/6/small/IMG_0205.JPG?1371219033"],
 		  "url":"https://www.bukalapak.com/p/sepeda/fork-suspension/suspension/mab5_-testing-bl-app",
