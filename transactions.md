@@ -59,6 +59,7 @@ curl -u 67287:lXymG93y83m6RHzZV5FY "https://api.bukalapak.com/v1/transactions.js
   "transactions":[{
     "id":51947,
     "state":"paid",
+    "unread": false,
     "transaction_id":"131203161947",
     "amount":20000,"quantity":1,
     "shipping_fee":8000,
@@ -135,6 +136,7 @@ curl -u 67287:lXymG93y83m6RHzZV5FY "https://api.bukalapak.com/v1/transactions/78
   "transactions":{
     "id":51947,
     "state":"paid",
+    "unread": false,
     "transaction_id":"131203161947",
     "amount":20000,"quantity":1,
     "shipping_fee":8000,
@@ -334,4 +336,4 @@ Successfull example
 - `actions` Actions that can be performed by current user. Possible values are
   - `deliver` Can be performed by seller at [Confirm Shipping for Transaction](#confirm-shipping) endpoint
   - `reject` Can be performed by seller at [Reject Transaction](#reject-transaction) endpoint
-  - PS: more actions to come in near future
+- `unread` Possible values are `true` and `false`. User required to take action as in `actions` if this field set to `true`. 
