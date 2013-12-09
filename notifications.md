@@ -46,13 +46,16 @@ curl -u 204254:Sy7PRGGr4foUk22uzjMu "https://api.bukalapak.com/v1/notifications/
 
 #### Example Response
 Success response:
+
 ````json
 {
   "status":"OK",
   "message":"Device added"
 }
+````
 
 Failed response:
+````json
 {
   "status":"ERROR",
   "message":"Failed adding device"
@@ -83,8 +86,10 @@ Success response:
   "status":"OK",
   "message":"Device logged out"
 }
+````
 
 Failed response:
+````json
 {
   "status":"ERROR",
   "message":"Failed logging out"
@@ -116,8 +121,10 @@ Success response:
   "status":"OK",
   "message":"Device unregistered"
 }
+````
 
 Failed response:
+````json
 {
   "status":"ERROR",
   "message":"The requested device doesn't belong to this user"
