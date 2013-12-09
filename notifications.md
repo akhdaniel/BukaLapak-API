@@ -6,6 +6,11 @@
   - [Parameters](#parameters)
   - [Example Request](#example-request)
   - [Example Response](#example-response)
+-[Logout Android Device](#logout-android-device)
+  - [Resource URL](#resource-url)
+  - [Parameters](#parameters)
+  - [Example Request](#example-request)
+  - [Example Response](#example-response)
 -[Remove Android Device](#remove-android-device)
   - [Resource URL](#resource-url)
   - [Parameters](#parameters)
@@ -54,20 +59,53 @@ Failed response:
 }
 ````
 
-### Remove Android Device
-Remove user's Android device from receiver devices list.
+### Logout Android Device
+Logout current user from current device.
 + Use `DELETE` http method
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/notifications/unregister.json]()
++ [https://api.bukalapak.com/v1/notifications/logout.json]()
 
 ##### Parameters
 + `reg_id` *(required)*. Registration ID of the device.
 
 ##### Example Request
 ````sh
-curl -u 204254:Sy7PRGGr4foUk22uzjMu "https://api.bukalapak.com/v1/notifications/unregister.json" -X DELETE --data "reg_id=ASD223SDA"
+curl -u 204254:Sy7PRGGr4foUk22uzjMu "https://api.bukalapak.com/v1/notifications/logout.json" -X DELETE --data "reg_id=ASD223SDA"
+
+````
+
+#### Example Response
+Success response:
+````json
+{
+  "status":"OK",
+  "message":"Device logged out"
+}
+
+Failed response:
+{
+  "status":"ERROR",
+  "message":"Failed logging out"
+}
+````
+
+
+### Remove Android Device
+Remove user's Android device from receiver devices list.
++ Use `DELETE` http method
++ Requires authentication
+
+##### Resource URL
++ [https://api.bukalapak.com/v1/notifications/android.json]()
+
+##### Parameters
++ `reg_id` *(required)*. Registration ID of the device.
+
+##### Example Request
+````sh
+curl -u 204254:Sy7PRGGr4foUk22uzjMu "https://api.bukalapak.com/v1/notifications/android.json" -X DELETE --data "reg_id=ASD223SDA"
 
 ````
 
@@ -82,7 +120,7 @@ Success response:
 Failed response:
 {
   "status":"ERROR",
-  "message":"The requested device doesn't belong to this user's devices list"
+  "message":"The requested device doesn't belong to this user"
 }
 ````
 
