@@ -246,13 +246,6 @@ Offer Notification
   "type"=>"nego"
 }
 
-Payment Notification
-
-{
-  "message"=>"Pembayaran untuk transaksi 51939",
-  "type"=>"dompet"
-}
-
 Message Notification
 
 {
