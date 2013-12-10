@@ -21,6 +21,11 @@
   - [Parameters](#parameters)
   - [Example Request](#example-request)
   - [Example Response](#example-response)
+- [Set Notifications as Read](#set-notifications-as-read)
+  - [Resource URL](#resource-url)
+  - [Parameters](#parameters)
+  - [Example Request](#example-request)
+  - [Example Response](#example-response)
 
 ## Notifications API
 
@@ -155,5 +160,29 @@ curl -u 204254:Sy7PRGGr4foUk22uzjMu "https://api.bukalapak.com/v1/notifications/
   "transactions_as_buyer":0,
   "unread_notifications":0,
   "transactions_need_action_as_buyer":4
+}
+````
+
+### Set Notifications as Read
++ Use `PUT` http method
++ Requires authentication
+
+##### Resource URL
++ [https://api.bukalapak.com/v1/notifications.json]()
+
+##### Parameters
++ `reg_id` *(required)*. Registration ID of the device.
+
+##### Example Request
+````sh
+curl -u 204254:Sy7PRGGr4foUk22uzjMu -X PUT "http://api.local.host:3000/v1/notifications.json" --data ""
+
+````
+
+#### Example Response
+````json
+{
+  "status":"OK",
+  "message":null
 }
 ````
