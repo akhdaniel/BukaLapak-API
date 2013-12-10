@@ -26,6 +26,11 @@
   - [Parameters](#parameters)
   - [Example Request](#example-request)
   - [Example Response](#example-response)
+- [Set a Notification as Read](#set-a-notifications-as-read)
+  - [Resource URL](#resource-url)
+  - [Parameters](#parameters)
+  - [Example Request](#example-request)
+  - [Example Response](#example-response)
 
 ## Notifications API
 
@@ -175,7 +180,7 @@ curl -u 204254:Sy7PRGGr4foUk22uzjMu "https://api.bukalapak.com/v1/notifications/
 
 ##### Example Request
 ````sh
-curl -u 204254:Sy7PRGGr4foUk22uzjMu -X PUT "http://api.local.host:3000/v1/notifications.json" --data ""
+curl -u 204254:Sy7PRGGr4foUk22uzjMu -X PUT "https://api.bukalapak.com/v1/notifications.json" --data ""
 
 ````
 
@@ -184,5 +189,40 @@ curl -u 204254:Sy7PRGGr4foUk22uzjMu -X PUT "http://api.local.host:3000/v1/notifi
 {
   "status":"OK",
   "message":null
+}
+````
+
+### Set a Notification as Read
++ Use `PUT` http method
++ Requires authentication
+
+##### Resource URL
++ [https://api.bukalapak.com/v1/notifications/:notification_transaction_id.json]()
+
+##### Parameters
++ `notification_transaction_id` *(required)*. Notification ID of the transaction.
+
+##### Example Request
+````sh
+curl -u 204254:Sy7PRGGr4foUk22uzjMu -X PUT "http://api.local.host:3000/v1/notifications/52a6e5e284eab03aa200013a.json"
+
+````
+
+#### Example Response
+````json
+Success response
+
+{
+  "status":"OK",
+  "unread":0,
+  "message":null
+}
+
+Failed response
+
+{
+  "status":"ERROR",
+  "unread":1,
+  "message":"The requested notifications doesn't belong to the current user"
 }
 ````
