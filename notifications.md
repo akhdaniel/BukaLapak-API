@@ -31,6 +31,7 @@
   - [Parameters](#parameters)
   - [Example Request](#example-request)
   - [Example Response](#example-response)
+- [Android Notifications Data Format](#android-notifications-data-format)
 
 ## Notifications API
 
@@ -224,5 +225,38 @@ Failed response
   "status":"ERROR",
   "unread":1,
   "message":"The requested notifications doesn't belong to the current user"
+}
+````
+
+
+### Android Notifications Data Examples
+
+````json
+Transaction Notification
+
+{
+  "message"=>"Kaos Dota Graphic 3 - XXL telah dipesan",
+  "type"=>"transaction"
+}
+
+Offer Notification
+
+{
+  "message"=>"Tawaran nego diterima",
+  "type"=>"nego"
+}
+
+Payment Notification
+
+{
+  "message"=>"Pembayaran untuk transaksi 51939",
+  "type"=>"dompet"
+}
+
+Message Notification
+
+{
+  "message"=>"Anda mendapatkan pesan dari Me Ow",
+  "type"=>"message"
 }
 ````
