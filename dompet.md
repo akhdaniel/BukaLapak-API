@@ -16,6 +16,7 @@
   - [Parameters](#parameters)
   - [Example Request](#example-request)
   - [Example Response](#example-response)
+- [Dictionary](#dictionary)
 
 ## Bukalapak Dompet API
 
@@ -125,3 +126,7 @@ failed:
 }
 
 ````
+
+### Dictionary
+- `type` Type of muation, possible values are `Deposit::Credit` and `Deposit::Debit`
+- `action` Action that trigger mutation. Possible values are  `remit`, `topup`, `payment`, `refund`, `withdrawal`, `restore`. 
