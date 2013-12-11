@@ -237,7 +237,36 @@ Transaction Notification
 {
   "type"=>"transaction",
   "receiver_id"=>204254,
-  "message"=>"Kaos Dota Graphic 3 - XXL telah dipesan"
+  "message"=>"Transaksi baru dari Liem Lie Wie",
+  "details"=>{
+    "id"=>51960,
+    "state"=>"paid",
+    "transaction_id"=>"131211141960",
+    "amount"=>155000,
+    "quantity"=>1,
+    "shipping_fee"=>8000,
+    "total_amount"=>163000,
+    "products"=>[1069398],
+    "consignee"=>{
+      "name"=>"Me Ow",
+      "address"=>"Jl Lancar XXI",
+      "city"=>"Jakarta Barat",
+      "province"=>"DKI Jakarta",
+      "post_code"=>"11440"
+    },
+    "buyer"=>{
+      "id"=>15,
+      "name"=>"Me Ow",
+      "username"=>"meow"
+    },
+    "seller"=>{
+      "id"=>204254,
+      "name"=>"Testing Account",
+      "username"=>"testingaccount"
+    },
+    "actions"=>["deliver", "reject"],
+    "created_at"=>"2013-12-11T14:59:21+07:00"
+  }
 }
 
 Offer Notification
@@ -245,7 +274,11 @@ Offer Notification
 {
   "type"=>"nego",
   "receiver_id"=>204254,
-  "message"=>"Tawaran nego diterima"
+  "message"=>"Anda mendapatkan tawaran nego dari Me Ow",
+  "details"=>{
+    "id"=>51580,
+    "product_id"=>1069403
+  }
 }
 
 Message Notification
@@ -254,5 +287,10 @@ Message Notification
   "type"=>"message",
   "receiver_id"=>204254,
   "message"=>"Anda mendapatkan pesan dari Me Ow"
+  "details"=>{
+    "id":"56be34322",
+    "inbox_id":"56be34",
+    "message"=>"mantab gan"
+  }
 }
 ````
