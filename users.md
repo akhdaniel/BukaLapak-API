@@ -198,9 +198,9 @@ Update account information for current user
 
 ##### Parameters
 + `user[name]` *(optional)*. User's name.
-+ `user[birthday(3i)]` *(optional)*. User's date of birth. Must be present if `user[birthday(2i)]` and `user[birthday(1i)]` is present.
-+ `user[birthday(2i)]` *(optional)*. User's month of birth. Must be present if `user[birthday(3i)]` and `user[birthday(1i)]` is present.
-+ `user[birthday(1i)]` *(optional)*. User's year of birth. Must be present if `user[birthday(3i)]` and `user[birthday(2i)]` is present.
++ `user[birthday(3i)]` *(optional)*. Date of birth. Use together with `user[birthday(2i)]` and `user[birthday(1i)]`.
++ `user[birthday(2i)]` *(optional)*. Month of birth. Use together with `user[birthday(3i)]` and `user[birthday(1i)]`
++ `user[birthday(1i)]` *(optional)*. Year of birth. Use together with `user[birthday(3i)]` and `user[birthday(2i)]`
 + `user[phone]` *(optional)*. User's phone number.
 + `user[address_attributes][province]` *(optional)*. User's province. Use together with other `address_attributes` data.
 + `user[address_attributes][city]` *(optional)*. User's city. Use together with other `address_attributes` data.
