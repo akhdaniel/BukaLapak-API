@@ -235,21 +235,24 @@ Failed response
 Transaction Notification
 
 {
-  "message"=>"Kaos Dota Graphic 3 - XXL telah dipesan",
-  "type"=>"transaction"
+  "type"=>"transaction",
+  "receiver_id"=>204254,
+  "message"=>"Kaos Dota Graphic 3 - XXL telah dipesan"
 }
 
 Offer Notification
 
 {
-  "message"=>"Tawaran nego diterima",
-  "type"=>"nego"
+  "type"=>"nego",
+  "receiver_id"=>204254,
+  "message"=>"Tawaran nego diterima"
 }
 
 Message Notification
 
 {
-  "message"=>"Anda mendapatkan pesan dari Me Ow",
-  "type"=>"message"
+  "type"=>"message",
+  "receiver_id"=>204254,
+  "message"=>"Anda mendapatkan pesan dari Me Ow"
 }
 ````
