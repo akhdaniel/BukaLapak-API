@@ -16,6 +16,11 @@
   - [Parameters](#parameters)
   - [Example Request](#example-request)
   - [Example Response](#example-response)
+- [User Account Setting Update](#user-info)
+  - [Resource URL](#resource-url)
+  - [Parameters](#parameters)
+  - [Example Request](#example-request)
+  - [Example Response](#example-response)
 - [User Feedbacks](#user-feedbacks)
   - [Resource URL](#resource-url)
   - [Parameters](#parameters)
@@ -144,7 +149,7 @@ Failed response
 ````
 
 ### User Account Setting View
-Get information for current user
+Get account information for current user
 + Use `GET` http method
 + Requires authentication
 
@@ -180,6 +185,54 @@ Success response:
     }
   },
   "message":null
+}
+````
+
+### User Account Setting Update
+Update account information for current user
++ Use `PUT` http method
++ Requires authentication
+
+##### Resource URL
++ [https://api.bukalapak.com/v1/users/:id.json]()
+
+##### Parameters
++ `user[name]` *(optional)*. User's name.
++ `user[birthday(3i)]` *(optional)*. User's date of birth. Must be present if `user[birthday(2i)]` and `user[birthday(1i)]` is present.
++ `user[birthday(2i)]` *(optional)*. User's month of birth. Must be present if `user[birthday(3i)]` and `user[birthday(1i)]` is present.
++ `user[birthday(1i)]` *(optional)*. User's year of birth. Must be present if `user[birthday(3i)]` and `user[birthday(2i)]` is present.
++ `user[phone]` *(optional)*. User's phone number.
++ `user[address_attributes][province]` *(optional)*. User's province. Use together with other `address_attributes` data.
++ `user[address_attributes][city]` *(optional)*. User's city. Use together with other `address_attributes` data.
++ `user[address_attributes][area]` *(optional)*. User's area. Use together with other `address_attributes` data.
++ `user[address_attributes][address]` *(optional)*. User's address. Use together with other `address_attributes` data.
++ `user[address_attributes][post_code]` *(optional)*. User's postal code. Use together with other `address_attributes` data.
+
+##### Example Request
+````sh
+curl -u 204254:Sy7PRGGr4foUk22uzjMu https://api.bukalapak.com/v1/users/204254.json  -X PUT --data "user[name]=asadasan&user[birthday(3i)]=12&user[birthday(2i)]=12&user[birthday(1i)]=1999&user[phone]=081238877&user[address_attributes][province]=Banten&user[address_attributes][city]=Tangerang&user[address_attributes][area]=Batuceper&user[address_attributes][address]=jl xxx&user[address_attributes][post_code]=11111"
+
+````
+
+##### Example Response
+Success response:
+````json
+{
+  "status":"OK",
+  "user":{
+    "id":204254,
+    "email":"testingaccount@test.com",
+    "phone":"081238877",
+    "name":"asadasan",
+    "birthday":"1999-12-12",
+    "address":{
+      "province":"Banten",
+      "city":"Tangerang",
+      "area":"Batuceper",
+      "address":"jl xxx",
+      "postal_code":"11111"
+    }
+  },"message":null
 }
 ````
 
