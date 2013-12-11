@@ -26,6 +26,11 @@
   - [Parameters](#parameters)
   - [Example Request](#example-request)
   - [Example Response](#example-response)
+- [Update Bank Account](#add-new-bank-account)
+  - [Resource URL](#resource-url)
+  - [Parameters](#parameters)
+  - [Example Request](#example-request)
+  - [Example Response](#example-response)
 
 ## Bukalapak User API
 
@@ -248,6 +253,43 @@ Success response
 {
   "status":"OK",
   "message":"Bank account added"
+}
+
+Failed response
+
+{
+  "status":"ERROR",
+  "message":"Incorrect password"
+}
+````
+
+### Update Bank Account
+Update current user's bank account.
++ Use `PUT` http method
++ Requires authentication
+
+##### Resource URL
++ [https://api.bukalapak.com/v1/users/banks/:bank_account_id.json]()
+
+##### Parameters
++ `payment_bank_account[name]` *(required)*. Name of the account owner.
++ `payment_bank_account[bank]` *(required)*. Name of the bank.
++ `payment_bank_account[number]` *(required)*. The bank account's number.
++ `password` *(required)*. Current user's password.
+
+
+##### Example Request
+````sh
+curl -u 204254:Sy7PRGGr4foUk22uzjMu -X PUT "https://api.bukalapak.com/v1/users/settings/bank/41829/primary.json" --data "payment_bank_account[name]=Bill Gates&payment_bank_account[bank]=Bank Central Asia (BCA)&payment_bank_account[number]=123 456 789&password=testing1234"
+````
+
+##### Example Response
+````json
+Success response
+
+{
+  "status":"OK",
+  "message":"Bank account updated"
 }
 
 Failed response
