@@ -11,6 +11,11 @@
   - [Parameters](#parameters)
   - [Example Request](#example-request)
   - [Example Response](#example-response)
+- [User Account Setting View](#user-info)
+  - [Resource URL](#resource-url)
+  - [Parameters](#parameters)
+  - [Example Request](#example-request)
+  - [Example Response](#example-response)
 - [User Feedbacks](#user-feedbacks)
   - [Resource URL](#resource-url)
   - [Parameters](#parameters)
@@ -135,6 +140,46 @@ Failed response
   "user_id":null,
   "token":null,
   "message":"Username sudah digunakan, Email sudah digunakan"
+}
+````
+
+### User Account Setting View
+Get information for current user
++ Use `GET` http method
++ Requires authentication
+
+##### Resource URL
++ [https://api.bukalapak.com/v1/users/:id.json]()
+
+##### Parameters
+None
+
+##### Example Request
+````sh
+curl -u 204254:Sy7PRGGr4foUk22uzjMu https://api.bukalapak.com/v1/users/204254.json
+
+````
+
+##### Example Response
+Success response:
+````json
+{
+  "status":"OK",
+  "user":{
+    "id":204254,
+    "email":"testingaccount@test.com",
+    "phone":"081238877",
+    "name":"Testing Account",
+    "birthday":"1999-12-12",
+    "address":{
+      "province":"Banten",
+      "city":"Tangerang",
+      "area":"Batuceper",
+      "address":"jl xxx",
+      "postal_code":"11111"
+    }
+  },
+  "message":null
 }
 ````
 
