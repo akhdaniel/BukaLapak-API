@@ -16,6 +16,11 @@
   - [Parameters](#parameters)
   - [Example Request](#example-request)
   - [Example Response](#example-response)
+- [Show Bank Accounts](#show-bank-accounts)
+  - [Resource URL](#resource-url)
+  - [Parameters](#parameters)
+  - [Example Request](#example-request)
+  - [Example Response](#example-response)
 
 ## Bukalapak User API
 
@@ -165,5 +170,48 @@ Success response:
       "updated_at":"2012-10-11T17:55:34+07:00"
     }
   ]
+}
+````
+
+### Show Bank Accounts
+Get bank account listing for the current user.
++ Use `GET` http method
++ Requires authentication
+
+##### Resource URL
++ [https://api.bukalapak.com/v1/users/banks.json]()
+
+##### Parameters
+None
+
+
+##### Example Request
+````sh
+curl -u 15:wcrG8WPPWaq9Ndiesbjn https://api.bukalapak.com/v1/users/banks.json
+
+````
+
+##### Example Response
+Success response:
+````json
+{
+  "status":"OK",
+  "accounts":[
+    {
+      "id":41829,
+      "bank":"Bank Central Asia (BCA)",
+      "number":"123 456 789",
+      "name":"Me Ow",
+      "primary":false
+    },
+    {
+      "id":41831,
+      "bank":"Bank Central Asia (BCA)",
+      "number":"987 654 321",
+      "name":"Me Ow",
+      "primary":false
+    }
+  ],
+  "message":null
 }
 ````
