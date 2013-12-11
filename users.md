@@ -21,6 +21,11 @@
   - [Parameters](#parameters)
   - [Example Request](#example-request)
   - [Example Response](#example-response)
+- [Add New Bank Account](#add-new-bank-account)
+  - [Resource URL](#resource-url)
+  - [Parameters](#parameters)
+  - [Example Request](#example-request)
+  - [Example Response](#example-response)
 
 ## Bukalapak User API
 
@@ -192,7 +197,6 @@ curl -u 15:wcrG8WPPWaq9Ndiesbjn https://api.bukalapak.com/v1/users/banks.json
 ````
 
 ##### Example Response
-Success response:
 ````json
 {
   "status":"OK",
@@ -213,5 +217,43 @@ Success response:
     }
   ],
   "message":null
+}
+````
+
+### Add New Bank Account
+Add new bank account for the current user.
++ Use `POST` http method
++ Requires authentication
+
+##### Resource URL
++ [https://api.bukalapak.com/v1/users/banks.json]()
+
+##### Parameters
++ `payment_bank_account[name]` *(required)*. Name of the account owner.
++ `payment_bank_account[bank]` *(required)*. Name of the bank.
++ `payment_bank_account[number]` *(required)*. The bank account's number.
++ `password` *(required)*. Current user's password.
+
+
+##### Example Request
+````sh
+curl -u 204254:Sy7PRGGr4foUk22uzjMu -X POST "https://api.bukalapak.com/v1/users/banks.json" --data "payment_bank_account[name]=Testing Account&payment_bank_account[bank]=Bank Central Asia (BCA)&payment_bank_account[number]=987 654 321&password=testing1234"
+
+````
+
+##### Example Response
+````json
+Success response
+
+{
+  "status":"OK",
+  "message":"Bank account added"
+}
+
+Failed response
+
+{
+  "status":"ERROR",
+  "message":"Incorrect password"
 }
 ````
