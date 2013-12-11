@@ -31,6 +31,16 @@
   - [Parameters](#parameters)
   - [Example Request](#example-request)
   - [Example Response](#example-response)
+- [Set Bank Account to Primary](#set-bank-account-to-primary)
+  - [Resource URL](#resource-url)
+  - [Parameters](#parameters)
+  - [Example Request](#example-request)
+  - [Example Response](#example-response)
+- [Delete Bank Account](#delete-bank-account)
+  - [Resource URL](#resource-url)
+  - [Parameters](#parameters)
+  - [Example Request](#example-request)
+  - [Example Response](#example-response)
 
 ## Bukalapak User API
 
@@ -297,5 +307,64 @@ Failed response
 {
   "status":"ERROR",
   "message":"Incorrect password"
+}
+````
+
+### Set Bank Account to Primary
+Set current user's primary bank account.
++ Use `PUT` http method
++ Requires authentication
+
+##### Resource URL
++ [https://api.bukalapak.com/v1/users/banks/:bank_account_id/primary.json]()
+
+##### Parameters
+None
+
+
+##### Example Request
+````sh
+curl -u 204254:Sy7PRGGr4foUk22uzjMu -X PUT "https://api.bukalapak.com/v1/users/banks/41831/primary.json" --data ""
+````
+
+##### Example Response
+````json
+{
+  "status":"OK",
+  "message":"Set to primary"
+}
+````
+
+### Delete Bank Account
+Delete current user's bank account.
++ Use `DELETE` http method
++ Requires authentication
+
+##### Resource URL
++ [https://api.bukalapak.com/v1/users/banks/:bank_account_id.json]()
+
+##### Parameters
+None
+
+
+##### Example Request
+````sh
+curl -u 204254:Sy7PRGGr4foUk22uzjMu -X DELETE "https://api.bukalapak.com/v1/users/banks/41832.json" --data ""
+````
+
+##### Example Response
+````json
+Success response
+
+{
+  "status":"OK",
+  "message":"Deleted"
+}
+
+Failed response
+
+{
+  "status":"ERROR",
+  "message":"The bank account doesn't belong to the current user"
 }
 ````
