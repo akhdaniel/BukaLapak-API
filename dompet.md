@@ -133,7 +133,7 @@ Invalid password
 {
   "status":"ERROR",
   "withdrawal_id":null,
-  "message":"Pencairan hanya bisa dilakukan satu kali sehari., Password tidak valid."
+  "message":"Password tidak valid."
 }
 
 >1 withdraw request in a day
@@ -144,7 +144,7 @@ Invalid password
 }
 
 >1 withdraw request in a day and invalid password
-{
+{ 
   "status":"ERROR",
   "withdrawal_id":null,
   "message":"Pencairan hanya bisa dilakukan satu kali sehari., Password tidak valid."
