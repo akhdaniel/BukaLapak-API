@@ -115,7 +115,7 @@ Success:
 {
   "status":"OK",
   "withdrawal_id":4,
-  "message":null
+  "message":"Saldo sekarang 1657458, akan berkurang menjadi 1632458 setelah pencairan dilaksanakan."
 }
 `````
 Failed:
