@@ -110,21 +110,45 @@ curl -u 204254:Sy7PRGGr4foUk22uzjMu -X POST "https://api.bukalapak.com/v1/dompet
 ````
 
 ##### Example Response
+Success:
 ````json
-success:
 {
   "status":"OK",
   "withdrawal_id":4,
   "message":null
 }
+`````
+Failed:
 
-failed:
+````json
+Invalid account ID
 {
-  "status":"OK",
-  "withdrawal_id":4,
+  "status":"ERROR",
+  "withdrawal_id":null,
+  "message":
+  "Rekening pencairan harus milik Anda."
+}
+
+Invalid password
+{
+  "status":"ERROR",
+  "withdrawal_id":null,
+  "message":"Pencairan hanya bisa dilakukan satu kali sehari., Password tidak valid."
+}
+
+>1 withdraw request in a day
+{
+  "status":"ERROR",
+  "withdrawal_id":null,
   "message":"Pencairan hanya bisa dilakukan satu kali sehari."
 }
 
+>1 withdraw request in a day and invalid password
+{
+  "status":"ERROR",
+  "withdrawal_id":null,
+  "message":"Pencairan hanya bisa dilakukan satu kali sehari., Password tidak valid."
+}
 ````
 
 ### Dictionary
