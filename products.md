@@ -497,7 +497,7 @@ Successfull example
 {
 	"status":"OK",
 	"id":"kxvi",
-	"message": null
+	"message":"Product Added"
 }
 ```
 
@@ -567,7 +567,7 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 		},
 		"state_description":[]
 	},
-	"message": null
+	"message": "Product Updated"
 }
 ```
 
@@ -705,7 +705,7 @@ Successfull example
 {
 	"status":"OK",
 	"id":"kxvi",
-	"message": null
+	"message": "Product Deleted"
 }
 ```
 
