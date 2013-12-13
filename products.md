@@ -487,9 +487,7 @@ Failed example
 {
 	"status":"ERROR",
 	"id":null,
-	"message":{
-		"images":["Image tidak boleh kosong"]
-	}
+	"message":"Image tidak boleh kosong"
 }
 ```
 Successfull example
