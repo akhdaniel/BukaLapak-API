@@ -115,7 +115,7 @@ Success:
 {
   "status":"OK",
   "withdrawal_id":4,
-  "message":"Pencairan dana akan diproses oleh tim Bukalapak. Saldo sekarang 1657458, akan berkurang menjadi 1632458 setelah pencairan."
+  "message":"Pencairan akan diproses oleh tim Bukalapak. Dana akan ditransfer ke rekening Anda dalam waktu 1x24 jam."
 }
 `````
 Failed:
