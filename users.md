@@ -11,6 +11,11 @@
   - [Parameters](#parameters)
   - [Example Request](#example-request)
   - [Example Response](#example-response)
+- [Password Reset](#register)
+  - [URL](#url)
+  - [Parameters](#parameters)
+  - [Example Request](#example-request)
+  - [Example Response](#example-response)
 - [User Account Setting View](#user-info)
   - [Resource URL](#resource-url)
   - [Parameters](#parameters)
@@ -146,6 +151,43 @@ Failed response
   "user_id":null,
   "token":null,
   "message":"Username sudah digunakan, Email sudah digunakan"
+}
+````
+
+### Password Reset
+Send password reset link and instruction to a registered user's e-mail address.
+
++ Use `POST` http method.
+
+##### URL
++ [https://api.bukalapak.com/v1/users/password_reset.json]()
+
+##### Parameters
+None
+
+##### POST request data
++ `user[email]` *(required)*. E-mail address for sending password reset instruction.
+
+##### Example Request
+````sh
+curl -X POST --data "email=testingaccount@test.com" "https://api.bukalapak.com/v1/users/password_reset.json"
+
+````
+
+##### Example Response
+Success response:
+````json
+{
+  "status":"OK",
+  "message":"Email penggantian password telah dikirimkan, silakan ikuti petunjuk yang diberikan"
+}
+````
+
+Failed response
+````json
+{
+  "status":"ERROR",
+  "message":"Tidak ada user yang terdaftar dengan email tersebut"
 }
 ````
 
