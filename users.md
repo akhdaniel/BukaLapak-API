@@ -233,7 +233,7 @@ Success response:
       "address":"jl xxx",
       "postal_code":"11111"
     }
-  },"message":null
+  },"message":"Account Updated"
 }
 ````
 

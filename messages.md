@@ -236,7 +236,7 @@ Successfull example
 {
 	"status":"OK",
 	"id":"516d303c425762188f000007",
-	"message": null
+	"message": "Pesan terkirim"
 }
 ```
 
