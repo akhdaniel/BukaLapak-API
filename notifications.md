@@ -373,7 +373,7 @@ Offer Notification
       "name"=>"Bantal bibir pink Impor",
       "normal_price"=>70000
     },
-    "actions"=>["finish"],
+    "actions"=>["accept", "reject"],
     "buyer"=>{
       "id"=>15,
       "name"=>"Me Ow",
