@@ -88,6 +88,7 @@ Success response:
     "email":"meow@domain.com",
     "phone":"022345678901",
     "avatar":"https://secure.gravatar.com/avatar/c8a0457bfc1b881755588e05a6ce55f0?s=50",
+    "avatar_id":"38432",
     "bank":
     {
       "name":"Bank Republik Dummy",
@@ -126,6 +127,7 @@ None
 + `user[address_attributes][address]` *(optional)*. User's address. Use together with other `address_attributes` data.
 + `user[address_attributes][post_code]` *(optional)*. User's postal code. Use together with other `address_attributes` data.
 + `user[policy]` *(required)*. Sign that user has accepted the agreements.
++ `user[avatar_attributes][data]` *(optional)*. Image for the user's avatar.
 
 ##### Example Request
 ````sh
@@ -250,6 +252,8 @@ Update account information for current user
 + `user[address_attributes][area]` *(optional)*. User's area. Use together with other `address_attributes` data.
 + `user[address_attributes][address]` *(optional)*. User's address. Use together with other `address_attributes` data.
 + `user[address_attributes][post_code]` *(optional)*. User's postal code. Use together with other `address_attributes` data.
++ `user[avatar_attributes][data]` *(optional)*. Image for the user's avatar.
++ `user[avatar_attributes][id]` *(optional)*. User's avatar ID. Required when updating avatar.
 
 ##### Example Request
 ````sh
