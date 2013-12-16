@@ -31,6 +31,16 @@
   - [Parameters](#parameters)
   - [Example Request](#example-request)
   - [Example Response](#example-response)
+- [Fetch Notification Config Settings](#fetch-notification-config-settings)
+  - [Resource URL](#resource-url)
+  - [Parameters](#parameters)
+  - [Example Request](#example-request)
+  - [Example Response](#example-response)
+- [Set Notification Config Settings](#set-notification-config-settings)
+  - [Resource URL](#resource-url)
+  - [Parameters](#parameters)
+  - [Example Request](#example-request)
+  - [Example Response](#example-response)
 - [Android Notifications Data Format](#android-notifications-data-format)
 
 ## Notifications API
@@ -228,6 +238,84 @@ Failed response
 }
 ````
 
+### Fetch Notification Config Settings
++ Use `GET` http method
++ Requires authentication
+
+##### Resource URL
++ [https://api.bukalapak.com/v1/notifications/config.json]()
+
+##### Parameters
++ `reg_id` *(required)*. Device registration ID.
+
+##### Example Request
+````sh
+curl -u 204254:Sy7PRGGr4foUk22uzjMu https://api.bukalapak.com/v1/notifications/config.json?reg_id=BD12A34
+
+````
+
+#### Example Response
+````json
+Success response
+
+{
+  "status":"OK",
+  "config":{
+    "transaction":1,
+    "nego":1,
+    "message":1,
+    "report":1
+  },
+  "message":null
+}
+
+Failed response
+
+{
+  "status":"ERROR",
+  "config":null,
+  "message":"Failed Fetching Device Configuration"
+}
+````
+
+### Set Notification Config Settings
++ Use `PUT` http method
++ Requires authentication
+
+##### Resource URL
++ [https://api.bukalapak.com/v1/notifications/config.json]()
+
+##### Parameters
++ `reg_id` *(required)*. Device registration ID.
++ `config` *(required)*. Configuration hash values. At least one must be present. Value `1` if on, value `0` if off.
+  + `config[transaction]` *(optional)*. Transaction push notification.
+  + `config[message]` *(optional)*. Message push notification.
+  + `config[nego]` *(optional)*. Offer push notification.
+  + `config[report]` *(optional)*. Report push notification.
+
+##### Example Request
+````sh
+curl -u 204254:Sy7PRGGr4foUk22uzjMu -X PUT "https://api.bukalapak.com/v1/notifications/config.json" --data "reg_id=BDNAEASM&config[transaction]=1&config[message]=0"
+
+````
+
+#### Example Response
+````json
+Success response
+
+{
+  "status":"OK",
+  "message":"Configuration Updated"
+}
+
+Failed response
+
+{
+  "status":"ERROR",
+  "message":"Failed Updating Configuration"
+}
+````
+
 
 ### Android Notifications Data Examples
 
@@ -292,5 +380,26 @@ Message Notification
     "inbox_id":"56be34",
     "message"=>"mantab gan"
   }
+}
+
+Report Notification
+
+{
+  "type"=>"report",
+  "receiver_id"=>204254,
+  "message"=>"g.kunci sinchan telah dilaporkan",
+  "details"=>nil
+}
+
+Reminder (Only Received Right After Logging in via App)
+
+{
+  "type"=>"reminder",
+  "unread_notifications"=>17,
+  "messages"=>0,
+  "transactions_need_action_as_seller"=>12,
+  "transactions_need_action_as_buyer"=>3,
+  "offers_need_action_as_seller"=>1,
+  "offers_need_action_as_buyer"=>0
 }
 ````
