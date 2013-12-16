@@ -362,10 +362,28 @@ Offer Notification
 {
   "type"=>"nego",
   "receiver_id"=>204254,
-  "message"=>"Anda mendapatkan tawaran nego dari Me Ow",
+  "message"=>"Anda mendapatkan tawaran nego dari Liem Lie Wie",
   "details"=>{
-    "id"=>51580,
-    "product_id"=>1069403
+    "id"=>51588,
+    "state"=>"waiting",
+    "amount"=>100,
+    "quantity"=>1,
+    "product"=>{
+      "id"=>1069403,
+      "name"=>"Bantal bibir pink Impor",
+      "normal_price"=>70000
+    },
+    "actions"=>["finish"],
+    "buyer"=>{
+      "id"=>15,
+      "name"=>"Me Ow",
+      "username"=>"meow"
+    },
+    "seller"=>{
+      "id"=>204254,
+      "name"=>"Testing Account",
+      "username"=>"testingaccount"
+    }
   }
 }
 
