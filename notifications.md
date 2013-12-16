@@ -362,7 +362,7 @@ Offer Notification
 {
   "type"=>"nego",
   "receiver_id"=>204254,
-  "message"=>"Anda mendapatkan tawaran nego dari Liem Lie Wie",
+  "message"=>"Anda mendapatkan tawaran nego dari Me Ow",
   "details"=>{
     "id"=>51588,
     "state"=>"waiting",
