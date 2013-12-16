@@ -360,29 +360,31 @@ Transaction Notification
 Offer Notification
 
 {
-  "type"=>"nego",
-  "receiver_id"=>204254,
-  "message"=>"Anda mendapatkan tawaran nego dari Me Ow",
-  "details"=>{
-    "id"=>51588,
-    "state"=>"waiting",
-    "amount"=>100,
-    "quantity"=>1,
-    "product"=>{
-      "id"=>1069403,
-      "name"=>"Bantal bibir pink Impor",
-      "normal_price"=>70000
-    },
-    "actions"=>["accept", "reject"],
-    "buyer"=>{
-      "id"=>15,
-      "name"=>"Me Ow",
-      "username"=>"meow"
-    },
-    "seller"=>{
-      "id"=>204254,
-      "name"=>"Testing Account",
-      "username"=>"testingaccount"
+  "data"=>{
+    "type"=>"nego",
+    "receiver_id"=>204254,
+    "message"=>"Anda mendapatkan tawaran nego dari Me Ow",
+    "details"=>{
+      "id"=>51588,
+      "state"=>"waiting",
+      "amount"=>100,
+      "quantity"=>1,
+      "product"=>{
+        "id"=>1069403,
+        "name"=>"Bantal bibir pink Impor",
+        "normal_price"=>70000
+      },
+      "actions"=>["accept", "reject"],
+      "buyer"=>{
+        "id"=>15,
+        "name"=>"Me Ow",
+        "username"=>"meow"
+      },
+      "seller"=>{
+        "id"=>204254,
+        "name"=>"Testing Account",
+        "username"=>"testingaccount"
+      }
     }
   }
 }
@@ -390,34 +392,40 @@ Offer Notification
 Message Notification
 
 {
-  "type"=>"message",
-  "receiver_id"=>204254,
-  "message"=>"Anda mendapatkan pesan dari Me Ow"
-  "details"=>{
-    "id":"56be34322",
-    "inbox_id":"56be34",
-    "message"=>"mantab gan"
+  "data"=>{
+    "type"=>"message",
+    "receiver_id"=>204254,
+    "message"=>"Anda mendapatkan pesan dari Me Ow"
+    "details"=>{
+      "id":"56be34322",
+      "inbox_id":"56be34",
+      "message"=>"mantab gan"
+    }
   }
 }
 
 Report Notification
 
 {
-  "type"=>"report",
-  "receiver_id"=>204254,
-  "message"=>"g.kunci sinchan telah dilaporkan",
-  "details"=>nil
+  "data"=>{
+    "type"=>"report",
+    "receiver_id"=>204254,
+    "message"=>"g.kunci sinchan telah dilaporkan",
+    "details"=>nil
+  }
 }
 
 Reminder (Only Received Right After Logging in via App)
 
 {
-  "type"=>"reminder",
-  "unread_notifications"=>17,
-  "messages"=>0,
-  "transactions_need_action_as_seller"=>12,
-  "transactions_need_action_as_buyer"=>3,
-  "offers_need_action_as_seller"=>1,
-  "offers_need_action_as_buyer"=>0
+  "data"=>{
+    "type"=>"reminder",
+    "unread_notifications"=>17,
+    "messages"=>0,
+    "transactions_need_action_as_seller"=>12,
+    "transactions_need_action_as_buyer"=>3,
+    "offers_need_action_as_seller"=>1,
+    "offers_need_action_as_buyer"=>0
+  }
 }
 ````
