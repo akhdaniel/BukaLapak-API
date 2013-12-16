@@ -41,7 +41,7 @@
   - [Parameters](#parameters)
   - [Example Request](#example-request)
   - [Example Response](#example-response)
-- [Android Notifications Data Format](#android-notifications-data-format)
+- [Android Notifications Data Examples](#android-notifications-data-examples)
 
 ## Notifications API
 
