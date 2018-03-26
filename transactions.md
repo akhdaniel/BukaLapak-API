@@ -40,8 +40,8 @@ Server will set `Etag` header to every request to this resource.
 + Use `GET` http method.
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/transactions.json](). No search parameter provided.
-+ [https://api.bukalapak.com/v1/transactions.json?page=2&per_page=10](). `page` and `per_page` provided.
++ [https://api.bukalapak.com/v2/transactions.json](). No search parameter provided.
++ [https://api.bukalapak.com/v2/transactions.json?page=2&per_page=10](). `page` and `per_page` provided.
 
 ##### Parameters
 + `page` *(optional)*. Page number, default to `0`.
@@ -49,7 +49,7 @@ Server will set `Etag` header to every request to this resource.
 
 ##### Example Request
 ```sh
-curl -u 67287:lXymG93y83m6RHzZV5FY "https://api.bukalapak.com/v1/transactions.json?page=2"
+curl -u 67287:lXymG93y83m6RHzZV5FY "https://api.bukalapak.com/v2/transactions.json?page=2"
 ```
 
 ##### Example Response
@@ -119,14 +119,14 @@ Server will set `Etag` header to every request to this resource.
 + Use `GET` http method.
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/transactions/:id.json]().
++ [https://api.bukalapak.com/v2/transactions/:id.json]().
 
 ##### Parameters
 + `id` *(required)*. Identifier for transaction being read.
 
 ##### Example Request
 ```sh
-curl -u 67287:lXymG93y83m6RHzZV5FY "https://api.bukalapak.com/v1/transactions/7870.json"
+curl -u 67287:lXymG93y83m6RHzZV5FY "https://api.bukalapak.com/v2/transactions/7870.json"
 ```
 
 ##### Example Response
@@ -193,7 +193,7 @@ Confirm Shipping for Transaction
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/transactions/confirm_shipping.json]().
++ [https://api.bukalapak.com/v2/transactions/confirm_shipping.json]().
 
 ##### Parameters
 None
@@ -206,7 +206,7 @@ None
 
 ##### Example Request
 ```sh
-curl -u 67287:lXymG93y83m6RHzZV5FY -d '{ "payment_shipping": { "transaction_id":"7870", "shipping_code":"1568772840123" } }' https://api.bukalapak.com/v1/transactions/confirm_shipping.json -H "Content-Type: application/json" -X POST
+curl -u 67287:lXymG93y83m6RHzZV5FY -d '{ "payment_shipping": { "transaction_id":"7870", "shipping_code":"1568772840123" } }' https://api.bukalapak.com/v2/transactions/confirm_shipping.json -H "Content-Type: application/json" -X POST
 ```
 
 ##### Example Response
@@ -234,7 +234,7 @@ Reject Transaction
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/transactions/reject.json]().
++ [https://api.bukalapak.com/v2/transactions/reject.json]().
 
 ##### Parameters
 None
@@ -249,7 +249,7 @@ None
 
 ##### Example Request
 ```sh
-curl -u 204254:Sy7PRGGr4foUk22uzjMu -X PUT "https://api.bukalapak.com/v1/transactions/reject.json" --data "id=51943&payment_rejection[reason]=Stok habis"
+curl -u 204254:Sy7PRGGr4foUk22uzjMu -X PUT "https://api.bukalapak.com/v2/transactions/reject.json" --data "id=51943&payment_rejection[reason]=Stok habis"
 ```
 
 ##### Example Response
@@ -275,7 +275,7 @@ Send Feeback to seller/buyer after transaction.
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/transactions/:id/feedbacks.json]().
++ [https://api.bukalapak.com/v2/transactions/:id/feedbacks.json]().
 
 ##### Parameters
 None
@@ -287,7 +287,7 @@ None
 
 ##### Example Request
 ```sh
-curl -u 67287:lXymG93y83m6RHzZV5FY -d '{ "feedback": { "body":"Puas dengan pembeli ini. Tidak rewel dan fast response.", "positive":"true"  } }' https://api.bukalapak.com/v1/transactions/7907/feedbacks.json -H "Content-Type: application/json" -X POST
+curl -u 67287:lXymG93y83m6RHzZV5FY -d '{ "feedback": { "body":"Puas dengan pembeli ini. Tidak rewel dan fast response.", "positive":"true"  } }' https://api.bukalapak.com/v2/transactions/7907/feedbacks.json -H "Content-Type: application/json" -X POST
 ```
 
 ##### Example Response
