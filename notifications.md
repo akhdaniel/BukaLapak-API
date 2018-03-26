@@ -51,7 +51,7 @@ Add user's Android device to receive notifications.
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/notifications/android.json]()
++ [https://api.bukalapak.com/v2/notifications/android.json]()
 
 ##### Parameters
 + `reg_id` *(required)*. Registration ID of the device.
@@ -61,7 +61,7 @@ Add user's Android device to receive notifications.
 
 ##### Example Request
 ````sh
-curl -u 204254:Sy7PRGGr4foUk22uzjMu "https://api.bukalapak.com/v1/notifications/android.json" -X POST --data "reg_id=ASD223SDA&model=GG-P4124H&manufacturer=Nokia&name=Lumpia"
+curl -u 204254:Sy7PRGGr4foUk22uzjMu "https://api.bukalapak.com/v2/notifications/android.json" -X POST --data "reg_id=ASD223SDA&model=GG-P4124H&manufacturer=Nokia&name=Lumpia"
 
 ````
 
@@ -89,14 +89,14 @@ Logout current user from current device.
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/notifications/logout.json]()
++ [https://api.bukalapak.com/v2/notifications/logout.json]()
 
 ##### Parameters
 + `reg_id` *(required)*. Registration ID of the device.
 
 ##### Example Request
 ````sh
-curl -u 204254:Sy7PRGGr4foUk22uzjMu "https://api.bukalapak.com/v1/notifications/logout.json" -X DELETE --data "reg_id=ASD223SDA"
+curl -u 204254:Sy7PRGGr4foUk22uzjMu "https://api.bukalapak.com/v2/notifications/logout.json" -X DELETE --data "reg_id=ASD223SDA"
 
 ````
 
@@ -124,14 +124,14 @@ Remove user's Android device from receiver devices list.
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/notifications/android.json]()
++ [https://api.bukalapak.com/v2/notifications/android.json]()
 
 ##### Parameters
 + `reg_id` *(required)*. Registration ID of the device.
 
 ##### Example Request
 ````sh
-curl -u 204254:Sy7PRGGr4foUk22uzjMu "https://api.bukalapak.com/v1/notifications/android.json" -X DELETE --data "reg_id=ASD223SDA"
+curl -u 204254:Sy7PRGGr4foUk22uzjMu "https://api.bukalapak.com/v2/notifications/android.json" -X DELETE --data "reg_id=ASD223SDA"
 
 ````
 
@@ -157,14 +157,14 @@ Get numbers of unread messages and transactions.
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/notifications/unreads.json]()
++ [https://api.bukalapak.com/v2/notifications/unreads.json]()
 
 ##### Parameters
 + `reg_id` *(required)*. Registration ID of the device.
 
 ##### Example Request
 ````sh
-curl -u 204254:Sy7PRGGr4foUk22uzjMu "https://api.bukalapak.com/v1/notifications/unreads.json"
+curl -u 204254:Sy7PRGGr4foUk22uzjMu "https://api.bukalapak.com/v2/notifications/unreads.json"
 
 ````
 
@@ -184,14 +184,14 @@ curl -u 204254:Sy7PRGGr4foUk22uzjMu "https://api.bukalapak.com/v1/notifications/
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/notifications.json]()
++ [https://api.bukalapak.com/v2/notifications.json]()
 
 ##### Parameters
 + `reg_id` *(required)*. Registration ID of the device.
 
 ##### Example Request
 ````sh
-curl -u 204254:Sy7PRGGr4foUk22uzjMu -X PUT "https://api.bukalapak.com/v1/notifications.json" --data ""
+curl -u 204254:Sy7PRGGr4foUk22uzjMu -X PUT "https://api.bukalapak.com/v2/notifications.json" --data ""
 
 ````
 
@@ -208,14 +208,14 @@ curl -u 204254:Sy7PRGGr4foUk22uzjMu -X PUT "https://api.bukalapak.com/v1/notific
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/notifications/:notification_transaction_id.json]()
++ [https://api.bukalapak.com/v2/notifications/:notification_transaction_id.json]()
 
 ##### Parameters
 + `notification_transaction_id` *(required)*. Notification ID of the transaction.
 
 ##### Example Request
 ````sh
-curl -u 204254:Sy7PRGGr4foUk22uzjMu -X PUT "http://api.local.host:3000/v1/notifications/52a6e5e284eab03aa200013a.json"
+curl -u 204254:Sy7PRGGr4foUk22uzjMu -X PUT "http://api.local.host:3000/v2/notifications/52a6e5e284eab03aa200013a.json"
 
 ````
 
@@ -243,14 +243,14 @@ Failed response
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/notifications/config.json]()
++ [https://api.bukalapak.com/v2/notifications/config.json]()
 
 ##### Parameters
 + `reg_id` *(required)*. Device registration ID.
 
 ##### Example Request
 ````sh
-curl -u 204254:Sy7PRGGr4foUk22uzjMu https://api.bukalapak.com/v1/notifications/config.json?reg_id=BD12A34
+curl -u 204254:Sy7PRGGr4foUk22uzjMu https://api.bukalapak.com/v2/notifications/config.json?reg_id=BD12A34
 
 ````
 
@@ -283,7 +283,7 @@ Failed response
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/notifications/config.json]()
++ [https://api.bukalapak.com/v2/notifications/config.json]()
 
 ##### Parameters
 + `reg_id` *(required)*. Device registration ID.
@@ -295,7 +295,7 @@ Failed response
 
 ##### Example Request
 ````sh
-curl -u 204254:Sy7PRGGr4foUk22uzjMu -X PUT "https://api.bukalapak.com/v1/notifications/config.json" --data "reg_id=BDNAEASM&config[transaction]=1&config[message]=0"
+curl -u 204254:Sy7PRGGr4foUk22uzjMu -X PUT "https://api.bukalapak.com/v2/notifications/config.json" --data "reg_id=BDNAEASM&config[transaction]=1&config[message]=0"
 
 ````
 
