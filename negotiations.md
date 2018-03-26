@@ -26,7 +26,7 @@ Get list of negotiations owned by user
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/negotiations.json]().
++ [https://api.bukalapak.com/v2/negotiations.json]().
 
 ##### Parameters
 + `page` *(optional)*.
@@ -34,7 +34,7 @@ Get list of negotiations owned by user
 
 ##### Example Request
 ```sh
-curl -u 110677:JheQQS0OKApu3hGJwkRH https://api.bukalapak.com/v1/negotiations.json
+curl -u 110677:JheQQS0OKApu3hGJwkRH https://api.bukalapak.com/v2/negotiations.json
 ```
 
 ##### Example Response
@@ -98,14 +98,14 @@ Accept incoming negotiation
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/negotiations/:id/accept.json]().
++ [https://api.bukalapak.com/v2/negotiations/:id/accept.json]().
 
 ##### Parameters
 None
 
 ##### Example Request
 ```sh
-curl -u 110677:JheQQS0OKApu3hGJwkRH -d {} https://api.bukalapak.com/v1/negotiations/124/accept.json -X PUT
+curl -u 110677:JheQQS0OKApu3hGJwkRH -d {} https://api.bukalapak.com/v2/negotiations/124/accept.json -X PUT
 ```
 
 ##### Example Response
@@ -178,14 +178,14 @@ Reject incoming negotiation
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/negotiations/:id/reject.json]().
++ [https://api.bukalapak.com/v2/negotiations/:id/reject.json]().
 
 ##### Parameters
 None
 
 ##### Example Request
 ```sh
-curl -u 110677:JheQQS0OKApu3hGJwkRH -d {} https://api.bukalapak.com/v1/negotiations/124/reject.json -X PUT
+curl -u 110677:JheQQS0OKApu3hGJwkRH -d {} https://api.bukalapak.com/v2/negotiations/124/reject.json -X PUT
 ```
 
 ##### Example Response
@@ -285,7 +285,7 @@ Create a new negotiation
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/negotiations.json]().
++ [https://api.bukalapak.com/v2/negotiations.json]().
 
 ##### Parameters
 None
@@ -297,7 +297,7 @@ None
 
 ##### Example Request
 ```sh
-curl -u 110677:JheQQS0OKApu3hGJwkRH -d '{ "amount":"1400000", "product_id":"gglq", "quantity":"1" }' https://api.bukalapak.com/v1/negotiations.json -H "Content-Type: application/json" -X POST
+curl -u 110677:JheQQS0OKApu3hGJwkRH -d '{ "amount":"1400000", "product_id":"gglq", "quantity":"1" }' https://api.bukalapak.com/v2/negotiations.json -H "Content-Type: application/json" -X POST
 ```
 
 ##### Example Response
@@ -339,7 +339,7 @@ Update an existing negotiation
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/negotiations/:id.json]().
++ [https://api.bukalapak.com/v2/negotiations/:id.json]().
 
 ##### Parameters
 None
@@ -351,11 +351,11 @@ None
 ##### Example Request
 Cancel Negotiation, Reject Negotiation, Accept Negotiation:
 ```sh
-curl -u 110677:JheQQS0OKApu3hGJwkRH -d '{ "status":"accept" }' https://api.bukalapak.com/v1/negotiations/10537.json -H "Content-Type: application/json" -X PUT
+curl -u 110677:JheQQS0OKApu3hGJwkRH -d '{ "status":"accept" }' https://api.bukalapak.com/v2/negotiations/10537.json -H "Content-Type: application/json" -X PUT
 ```
 Update Negotiation:
 ```sh
-curl -u 110677:JheQQS0OKApu3hGJwkRH -d '{ "status":"update", "amount":"1350000" }' https://api.bukalapak.com/v1/negotiations/10537.json -H "Content-Type: application/json" -X PUT
+curl -u 110677:JheQQS0OKApu3hGJwkRH -d '{ "status":"update", "amount":"1350000" }' https://api.bukalapak.com/v2/negotiations/10537.json -H "Content-Type: application/json" -X PUT
 ```
 
 ##### Example Response
