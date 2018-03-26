@@ -57,9 +57,9 @@ Server will set `Etag` header to every request to this resource.
 + Use `GET` http method.
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/products.json](). No search parameter provided.
-+ [https://api.bukalapak.com/v1/products.json?keywords=mtb](). Show products match with keywords `mtb`.
-+ [https://api.bukalapak.com/v1/products.json?page=1&per_page=10](). First ten products.
++ [https://api.bukalapak.com/v2/products.json](). No search parameter provided.
++ [https://api.bukalapak.com/v2/products.json?keywords=mtb](). Show products match with keywords `mtb`.
++ [https://api.bukalapak.com/v2/products.json?page=1&per_page=10](). First ten products.
 
 ##### Parameters
 + `keywords` *(optional)*. Keywords use to search products.
@@ -70,10 +70,10 @@ Server will set `Etag` header to every request to this resource.
 ##### Example Request by Keywords
 ```sh
 curl -u 67287:lXymG93y83m6RHzZV5FY \
-"https://api.bukalapak.com/v1/products.json?keywords=fixie&page=2&per_page=20"
+"https://api.bukalapak.com/v2/products.json?keywords=fixie&page=2&per_page=20"
 
 curl -u 67287:lXymG93y83m6RHzZV5FY -H 'If-None-Match: "9c17139c006bd5e543028b12b978967b"' \
-"https://api.bukalapak.com/v1/products.json"
+"https://api.bukalapak.com/v2/products.json"
 ```
 
 ##### Example Response by Keywords
@@ -114,7 +114,7 @@ curl -u 67287:lXymG93y83m6RHzZV5FY -H 'If-None-Match: "9c17139c006bd5e543028b12b
 ##### Example Request by Keywords, Minimum Price and Maximum Price
 ```sh
 curl -u 67287:lXymG93y83m6RHzZV5FY \
-"https://api.bukalapak.com/v1/products.json?keywords=galaxy+tab&price_range=on&price_min=3300000&price_max=3500000"
+"https://api.bukalapak.com/v2/products.json?keywords=galaxy+tab&price_range=on&price_min=3300000&price_max=3500000"
 ```
 
 ##### Example Response by Keywords, Minimum Price and Maximum Price
@@ -172,7 +172,7 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 ##### Example Request by Brand
 ```sh
 curl -u 67287:lXymG93y83m6RHzZV5FY \
-"https://api.bukalapak.com/v1/products.json?brand=Polygon"
+"https://api.bukalapak.com/v2/products.json?brand=Polygon"
 ```
 
 ##### Example Response by Brand
@@ -212,7 +212,7 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 ##### Example Request by Nego
 ```sh
 curl -u 67287:lXymG93y83m6RHzZV5FY \
-"https://api.bukalapak.com/v1/products.json?nego=1
+"https://api.bukalapak.com/v2/products.json?nego=1
 ```
 
 ##### Example Response by Nego
@@ -254,7 +254,7 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 ##### Example Request by Keywords and Range Price
 ```sh
 curl -u 67287:lXymG93y83m6RHzZV5FY \
-"https://api.bukalapak.com/v1/products.json?keywords=blackberry&price_range=5000000-10000000"
+"https://api.bukalapak.com/v2/products.json?keywords=blackberry&price_range=5000000-10000000"
 ```
 
 ##### Example Response by Keywords and Range Price
@@ -299,7 +299,7 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 ##### Example Request by Keywords and New Condtions
 ```sh
 curl -u 67287:lXymG93y83m6RHzZV5FY \
-"https://api.bukalapak.com/v1/products.json?keywords=nikon&conditions\[\]=new"
+"https://api.bukalapak.com/v2/products.json?keywords=nikon&conditions\[\]=new"
 ```
 
 ##### Example Response by Keywords and New Condtions
@@ -344,7 +344,7 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 ##### Example Request by Keywords and Used Condtions
 ```sh
 curl -u 67287:lXymG93y83m6RHzZV5FY \
-"https://api.bukalapak.com/v1/products.json?keywords=canon&conditions\[\]=used"
+"https://api.bukalapak.com/v2/products.json?keywords=canon&conditions\[\]=used"
 ```
 
 ##### Example Response by Keywords and Used Condtions
@@ -397,8 +397,8 @@ Server will set `Etag` header to every request to this resource.
 + Use `GET` http method.
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/products/mylapak.json](). No search parameter available. Get products which **can be purchased**.
-+ [https://api.bukalapak.com/v1/products/mylapak.json?not_for_sale_only=1](). Get products which **can not be purchased**.
++ [https://api.bukalapak.com/v2/products/mylapak.json](). No search parameter available. Get products which **can be purchased**.
++ [https://api.bukalapak.com/v2/products/mylapak.json?not_for_sale_only=1](). Get products which **can not be purchased**.
 
 ##### Parameters
 + `not_for_sale_only` *(optional)*. Ask to return products which can not be purchased if set to **1**
@@ -406,7 +406,7 @@ Server will set `Etag` header to every request to this resource.
 ##### Example Request
 ```sh
 curl -u 67287:lXymG93y83m6RHzZV5FY \
-"https://api.bukalapak.com/v1/products/mylapak.json"
+"https://api.bukalapak.com/v2/products/mylapak.json"
 ```
 
 ##### Example Response
@@ -449,7 +449,7 @@ Create a new product
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/products.json]().
++ [https://api.bukalapak.com/v2/products.json]().
 
 ##### Parameters
 None
@@ -478,7 +478,7 @@ curl -u 67287:lXymG93y83m6RHzZV5FY \
 	"product": { "category_id":"242", "name":"Polygon Helios 200", "new":"true", "price":"2700000", "negotiable":"true", "weight":"5000", "stock":"2", "description_bb":"Sepeda roadbike polygon series helios 200", \
 	"product_detail_attributes":{ "type":"Roadbike", "brand":"Polygon", "bahan":"Cromoly" } }, \
 	"images":"10820,10822,10283"}' \
-"https://api.bukalapak.com/v1/products.json" -H "Content-Type: application/json" -X POST
+"https://api.bukalapak.com/v2/products.json" -H "Content-Type: application/json" -X POST
 ```
 
 ##### Example Response
@@ -506,7 +506,7 @@ Update an existing user's product
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/products/:id.json]().
++ [https://api.bukalapak.com/v2/products/:id.json]().
 
 ##### Parameters
 + `id` *(required)*. Identifier for product being updated.
@@ -532,7 +532,7 @@ Update an existing user's product
 ```sh
 curl -u 67287:lXymG93y83m6RHzZV5FY \
 -d '{ "product": { "price":"2700000", "stock":"2" }, "new_images": "623525,4552235", "removed_images":"866632" }' \
-"https://api.bukalapak.com/v1/products/f3vi.json" -H "Content-Type: application/json" -X PUT
+"https://api.bukalapak.com/v2/products/f3vi.json" -H "Content-Type: application/json" -X PUT
 ```
 
 ##### Example Response
@@ -579,7 +579,7 @@ Server will set `Etag` header to every request to this resource.
 + Use `GET` http method.
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/products/:id.json]().
++ [https://api.bukalapak.com/v2/products/:id.json]().
 
 ##### Parameters
 + `id` *(required)*. Identifier for product being read.
@@ -587,7 +587,7 @@ Server will set `Etag` header to every request to this resource.
 ##### Example Request
 ```sh
 curl -u 67287:lXymG93y83m6RHzZV5FY \
-"https://api.bukalapak.com/v1/products/kxvi.json" -H "Content-Type: application/json" -X GET
+"https://api.bukalapak.com/v2/products/kxvi.json" -H "Content-Type: application/json" -X GET
 ```
 
 ##### Example Response
@@ -632,7 +632,7 @@ Set Product to Sold
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/products/:id/sold.json]().
++ [https://api.bukalapak.com/v2/products/:id/sold.json]().
 
 ##### Parameters
 + `id` *(required)*. Identifier for product being sold.
@@ -640,7 +640,7 @@ Set Product to Sold
 ##### Example Request
 ```sh
 curl -u 67287:lXymG93y83m6RHzZV5FY \
-"https://api.bukalapak.com/v1/products/kxvi/sold.json" -H "Content-Type: application/json" -X PUT
+"https://api.bukalapak.com/v2/products/kxvi/sold.json" -H "Content-Type: application/json" -X PUT
 ```
 
 ##### Example Response
@@ -659,7 +659,7 @@ Set Product to Available
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/products/:id/relist.json]().
++ [https://api.bukalapak.com/v2/products/:id/relist.json]().
 
 ##### Parameters
 + `id` *(required)*. Identifier for product being relist.
@@ -667,7 +667,7 @@ Set Product to Available
 ##### Example Request
 ```sh
 curl -u 67287:lXymG93y83m6RHzZV5FY \
-"https://api.bukalapak.com/v1/products/kxvi/relist.json" -H "Content-Type: application/json" -X PUT
+"https://api.bukalapak.com/v2/products/kxvi/relist.json" -H "Content-Type: application/json" -X PUT
 ```
 
 ##### Example Response
@@ -686,7 +686,7 @@ Delete existing product
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/products/:id.json]().
++ [https://api.bukalapak.com/v2/products/:id.json]().
 
 ##### Parameters
 + `id` *(required)*. Identifier for product being destroy.
@@ -694,7 +694,7 @@ Delete existing product
 ##### Example Request
 ```sh
 curl -u 67287:lXymG93y83m6RHzZV5FY \
-"https://api.bukalapak.com/v1/products/kxvi.json" -H "Content-Type: application/json" -X DELETE
+"https://api.bukalapak.com/v2/products/kxvi.json" -H "Content-Type: application/json" -X DELETE
 ```
 
 ##### Example Response
