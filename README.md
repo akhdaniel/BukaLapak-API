@@ -1,5 +1,7 @@
 ### [Bukalapak API](README.md)
 
+Notes: URI changed from /v1 to /v2.
+
 ## Introduction
 
 Some of resources and url require authentication.
@@ -21,4 +23,4 @@ Authentication uses `user_id` and `token` which can be obtained in two ways.
 
 ## Debugging
 + We provide logging to store your API request parameters. Find it in [API Secret Page](https://www.bukalapak.com/users/api_secret)
-+ Tips: turn on `verbose` flag to inspect response from server, i.e. `curl -v https://api.bukalapak.com/v1/object.json`
++ Tips: turn on `verbose` flag to inspect response from server, i.e. `curl -v https://api.bukalapak.com/v2/object.json`
