@@ -41,7 +41,7 @@ Get current user's inbox
 + Use `GET` http method.
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/messages.json]().
++ [https://api.bukalapak.com/v2/messages.json]().
 
 ##### Parameters
 + `page` *(optional)*. Default to `1`
@@ -49,7 +49,7 @@ Get current user's inbox
 
 ##### Example Request
 ````sh
-curl -u 67287:lXymG93y83m6RHzZV5FY https://api.bukalapak.com/v1/messages.json?page=1
+curl -u 67287:lXymG93y83m6RHzZV5FY https://api.bukalapak.com/v2/messages.json?page=1
 ````
 
 ##### Example Response
@@ -104,7 +104,7 @@ Get current user's selected conversation
 + Use `GET` http method.
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/messages/:id.json]().
++ [https://api.bukalapak.com/v2/messages/:id.json]().
 
 ##### Parameters
 + `page` *(optional)*. Default to `1`
@@ -112,7 +112,7 @@ Get current user's selected conversation
 
 ##### Example Request
 ````sh
-curl -u 67287:lXymG93y83m6RHzZV5FY https://api.bukalapak.com/v1/messages/516d3299425762188f000011.json?per_page=5
+curl -u 67287:lXymG93y83m6RHzZV5FY https://api.bukalapak.com/v2/messages/516d3299425762188f000011.json?per_page=5
 ````
 
 ##### Example Response
@@ -155,14 +155,14 @@ Get current user's selected message
 + Use `GET` http method.
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/messages/im/:id.json]().
++ [https://api.bukalapak.com/v2/messages/im/:id.json]().
 
 ##### Parameters
 None
 
 ##### Example Request
 ````sh
-curl -u 67287:lXymG93y83m6RHzZV5FY https://api.bukalapak.com/v1/messages/im/516e2565177961034c000002.json
+curl -u 67287:lXymG93y83m6RHzZV5FY https://api.bukalapak.com/v2/messages/im/516e2565177961034c000002.json
 ````
 
 ##### Example Response
@@ -192,7 +192,7 @@ Create a new message
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/messages.json]().
++ [https://api.bukalapak.com/v2/messages.json]().
 
 ##### Parameters
 None
@@ -247,14 +247,14 @@ Delete existing conversation
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/messages/:id.json]().
++ [https://api.bukalapak.com/v2/messages/:id.json]().
 
 ##### Parameters
 + `id` *(required)*. Identifier for product being destroy.
 
 ##### Example Request
 ```sh
-curl -u 110677:JheQQS0OKApu3hGJwkRH https://api.bukalapak.com/v1/messages/516d3299425762188f000011.json -H "Content-Type: application/json" -X DELETE
+curl -u 110677:JheQQS0OKApu3hGJwkRH https://api.bukalapak.com/v2/messages/516d3299425762188f000011.json -H "Content-Type: application/json" -X DELETE
 ```
 
 ##### Example Response
@@ -274,14 +274,14 @@ Delete existing message
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/messages/im/:id.json]().
++ [https://api.bukalapak.com/v2/messages/im/:id.json]().
 
 ##### Parameters
 + `id` *(required)*. Identifier for product being destroy.
 
 ##### Example Request
 ```sh
-curl -u 110677:JheQQS0OKApu3hGJwkRH https://api.bukalapak.com/v1/messages/516d3299425762188f000015.json -H "Content-Type: application/json" -X DELETE
+curl -u 110677:JheQQS0OKApu3hGJwkRH https://api.bukalapak.com/v2/messages/516d3299425762188f000015.json -H "Content-Type: application/json" -X DELETE
 ```
 
 ##### Example Response
