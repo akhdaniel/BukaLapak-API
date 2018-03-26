@@ -26,7 +26,7 @@ Get current user's mutation history.
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/dompet/history/mutations.json]()
++ [https://api.bukalapak.com/v2/dompet/history/mutations.json]()
 
 ##### Parameters
 + `page` *(optional)*. Page number to display. Default value is *1*.
@@ -61,7 +61,7 @@ Get current user's withdrawal history.
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/dompet/history/withdrawals.json]()
++ [https://api.bukalapak.com/v2/dompet/history/withdrawals.json]()
 
 ##### Parameters
 + `page` *(optional)*. Page number to display. Default value is *1*.
@@ -69,7 +69,7 @@ Get current user's withdrawal history.
 
 ##### Example Request
 ````sh
-curl -u 204254:Sy7PRGGr4foUk22uzjMu "https://api.bukalapak.com/v1/dompet/history/withdrawals.json?page=1&per_page=1"
+curl -u 204254:Sy7PRGGr4foUk22uzjMu "https://api.bukalapak.com/v2/dompet/history/withdrawals.json?page=1&per_page=1"
 
 ````
 
@@ -96,7 +96,7 @@ Make withdrawal request for current user.
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/dompet/withdraw.json]()
++ [https://api.bukalapak.com/v2/dompet/withdraw.json]()
 
 ##### Parameters
 + `deposit_withdrawal[amount]` *(required)*. Amount to withdraw.
@@ -105,7 +105,7 @@ Make withdrawal request for current user.
 
 ##### Example Request
 ````sh
-curl -u 204254:Sy7PRGGr4foUk22uzjMu -X POST "https://api.bukalapak.com/v1/dompet/withdraw.json" --data "deposit_withdrawal[amount]=25000&deposit_withdrawal[bank_account_id]=41812&deposit_withdrawal[password]=testing1234"
+curl -u 204254:Sy7PRGGr4foUk22uzjMu -X POST "https://api.bukalapak.com/v2/dompet/withdraw.json" --data "deposit_withdrawal[amount]=25000&deposit_withdrawal[bank_account_id]=41812&deposit_withdrawal[password]=testing1234"
 
 ````
 
