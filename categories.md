@@ -103,14 +103,14 @@ Server will set `Etag` header to every request to this resource.
 + Use `GET` http method.
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/categories/:id/attributes.json]()
++ [https://api.bukalapak.com/v2/categories/:id/attributes.json]()
 
 ##### Parameters
 None
 
 ##### Example Request
 ````sh
-curl -u 67287:lXymG93y83m6RHzZV5FY https://api.bukalapak.com/v1/categories/8/attributes.json
+curl -u 67287:lXymG93y83m6RHzZV5FY https://api.bukalapak.com/v2/categories/8/attributes.json
 
 ````
 
