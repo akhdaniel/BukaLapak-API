@@ -26,7 +26,7 @@ Create Image
 + Use `POST` http method.
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/images.json]()
++ [https://api.bukalapak.com/v2/images.json]()
 
 ##### Parameters
 None
@@ -36,7 +36,7 @@ None
 
 ##### Example Request
 ````sh
-curl -u 15:wcrG8WPPWaq9Ndiesbjn https://api.bukalapak.com/v1/images.json -F file=@product-image.png -X POST
+curl -u 15:wcrG8WPPWaq9Ndiesbjn https://api.bukalapak.com/v2/images.json -F file=@product-image.png -X POST
 
 ````
 
@@ -64,14 +64,14 @@ Check image status whether it has been assigned to a product or not.
 + Use `GET` http method.
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/images/status/:id.json]()
++ [https://api.bukalapak.com/v2/images/status/:id.json]()
 
 ##### Parameters
 + `id` *(required)*. Image identifier.
 
 ##### Example Request
 ````sh
-curl -u 15:wcrG8WPPWaq9Ndiesbjn https://api.bukalapak.com/v1/images/status/181244.json
+curl -u 15:wcrG8WPPWaq9Ndiesbjn https://api.bukalapak.com/v2/images/status/181244.json
 
 ````
 
@@ -99,14 +99,14 @@ Delete image.
 + Use `DELETE` http method.
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/images/:id.json]()
++ [https://api.bukalapak.com/v2/images/:id.json]()
 
 ##### Parameters
 + `id` *(required)*. Image identifier.
 
 ##### Example Request
 ````sh
-curl -u 15:wcrG8WPPWaq9Ndiesbjn -X DELETE https://api.bukalapak.com/v1/images/181244.json
+curl -u 15:wcrG8WPPWaq9Ndiesbjn -X DELETE https://api.bukalapak.com/v2/images/181244.json
 
 ````
 
