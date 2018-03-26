@@ -66,14 +66,14 @@ Get information for current user
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/users/info.json]()
++ [https://api.bukalapak.com/v2/users/info.json]()
 
 ##### Parameters
 None
 
 ##### Example Request
 ````sh
-curl -u 15:wcrG8WPPWaq9Ndiesbjn https://api.bukalapak.com/v1/users/info.json
+curl -u 15:wcrG8WPPWaq9Ndiesbjn https://api.bukalapak.com/v2/users/info.json
 
 ````
 
@@ -105,7 +105,7 @@ Return token after registration to enable access for `required authentication's 
 + Use `POST` http method.
 
 ##### URL
-+ [https://api.bukalapak.com/v1/users.json]()
++ [https://api.bukalapak.com/v2/users.json]()
 
 ##### Parameters
 None
@@ -129,7 +129,7 @@ None
 
 ##### Example Request
 ````sh
-curl -X POST --data "user[email]=testing@testing12349.com&user[username]=testingtesting9&user[name]=asadasan&user[birthday(3i)]=12&user[birthday(2i)]=12&user[birthday(1i)]=1999&user[password]=testing1234&user[password_confirmation]=testing1234&user[phone]=081238877&user[address_attributes][province]=Banten&user[address_attributes][city]=Tangerang&user[address_attributes][area]=Batuceper&user[address_attributes][address]=jl xxx&user[address_attributes][post_code]=11111]&user[policy]=1" "https://api.bukalapak.com/v1/users.json"
+curl -X POST --data "user[email]=testing@testing12349.com&user[username]=testingtesting9&user[name]=asadasan&user[birthday(3i)]=12&user[birthday(2i)]=12&user[birthday(1i)]=1999&user[password]=testing1234&user[password_confirmation]=testing1234&user[phone]=081238877&user[address_attributes][province]=Banten&user[address_attributes][city]=Tangerang&user[address_attributes][area]=Batuceper&user[address_attributes][address]=jl xxx&user[address_attributes][post_code]=11111]&user[policy]=1" "https://api.bukalapak.com/v2/users.json"
 
 ````
 
@@ -160,7 +160,7 @@ Send password reset link and instruction to a registered user's e-mail address.
 + Use `POST` http method.
 
 ##### URL
-+ [https://api.bukalapak.com/v1/users/password_reset.json]()
++ [https://api.bukalapak.com/v2/users/password_reset.json]()
 
 ##### Parameters
 None
@@ -170,7 +170,7 @@ None
 
 ##### Example Request
 ````sh
-curl -X POST --data "email=testingaccount@test.com" "https://api.bukalapak.com/v1/users/password_reset.json"
+curl -X POST --data "email=testingaccount@test.com" "https://api.bukalapak.com/v2/users/password_reset.json"
 
 ````
 
@@ -197,14 +197,14 @@ Get account information for current user
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/users/:id.json]()
++ [https://api.bukalapak.com/v2/users/:id.json]()
 
 ##### Parameters
 None
 
 ##### Example Request
 ````sh
-curl -u 204254:Sy7PRGGr4foUk22uzjMu https://api.bukalapak.com/v1/users/204254.json
+curl -u 204254:Sy7PRGGr4foUk22uzjMu https://api.bukalapak.com/v2/users/204254.json
 
 ````
 
@@ -237,7 +237,7 @@ Update account information for current user
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/users/:id.json]()
++ [https://api.bukalapak.com/v2/users/:id.json]()
 
 ##### Parameters
 + `user[name]` *(optional)*. User's name.
@@ -253,7 +253,7 @@ Update account information for current user
 
 ##### Example Request
 ````sh
-curl -u 204254:Sy7PRGGr4foUk22uzjMu https://api.bukalapak.com/v1/users/204254.json  -X PUT --data "user[name]=asadasan&user[birthday(3i)]=12&user[birthday(2i)]=12&user[birthday(1i)]=1999&user[phone]=081238877&user[address_attributes][province]=Banten&user[address_attributes][city]=Tangerang&user[address_attributes][area]=Batuceper&user[address_attributes][address]=jl xxx&user[address_attributes][post_code]=11111"
+curl -u 204254:Sy7PRGGr4foUk22uzjMu https://api.bukalapak.com/v2/users/204254.json  -X PUT --data "user[name]=asadasan&user[birthday(3i)]=12&user[birthday(2i)]=12&user[birthday(1i)]=1999&user[phone]=081238877&user[address_attributes][province]=Banten&user[address_attributes][city]=Tangerang&user[address_attributes][area]=Batuceper&user[address_attributes][address]=jl xxx&user[address_attributes][post_code]=11111"
 
 ````
 
@@ -285,7 +285,7 @@ Get feedback listing for current user
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/users/:id/feedbacks.json]()
++ [https://api.bukalapak.com/v2/users/:id/feedbacks.json]()
 
 ##### Parameters
 + `page` *(optional)*.
@@ -295,7 +295,7 @@ Get feedback listing for current user
 
 ##### Example Request
 ````sh
-curl -u 15:wcrG8WPPWaq9Ndiesbjn https://api.bukalapak.com/v1/users/62817/feedbacks.json?page=1&per_page=10&seller=0
+curl -u 15:wcrG8WPPWaq9Ndiesbjn https://api.bukalapak.com/v2/users/62817/feedbacks.json?page=1&per_page=10&seller=0
 
 ````
 
@@ -340,7 +340,7 @@ Get bank account listing for the current user.
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/users/banks.json]()
++ [https://api.bukalapak.com/v2/users/banks.json]()
 
 ##### Parameters
 None
@@ -348,7 +348,7 @@ None
 
 ##### Example Request
 ````sh
-curl -u 15:wcrG8WPPWaq9Ndiesbjn https://api.bukalapak.com/v1/users/banks.json
+curl -u 15:wcrG8WPPWaq9Ndiesbjn https://api.bukalapak.com/v2/users/banks.json
 
 ````
 
@@ -382,7 +382,7 @@ Add new bank account for the current user.
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/users/banks.json]()
++ [https://api.bukalapak.com/v2/users/banks.json]()
 
 ##### Parameters
 + `payment_bank_account[name]` *(required)*. Name of the account owner.
@@ -393,7 +393,7 @@ Add new bank account for the current user.
 
 ##### Example Request
 ````sh
-curl -u 204254:Sy7PRGGr4foUk22uzjMu -X POST "https://api.bukalapak.com/v1/users/banks.json" --data "payment_bank_account[name]=Testing Account&payment_bank_account[bank]=Bank Central Asia (BCA)&payment_bank_account[number]=987 654 321&password=testing1234"
+curl -u 204254:Sy7PRGGr4foUk22uzjMu -X POST "https://api.bukalapak.com/v2/users/banks.json" --data "payment_bank_account[name]=Testing Account&payment_bank_account[bank]=Bank Central Asia (BCA)&payment_bank_account[number]=987 654 321&password=testing1234"
 
 ````
 
@@ -420,7 +420,7 @@ Update current user's bank account.
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/users/banks/:bank_account_id.json]()
++ [https://api.bukalapak.com/v2/users/banks/:bank_account_id.json]()
 
 ##### Parameters
 + `payment_bank_account[name]` *(required)*. Name of the account owner.
@@ -431,7 +431,7 @@ Update current user's bank account.
 
 ##### Example Request
 ````sh
-curl -u 204254:Sy7PRGGr4foUk22uzjMu -X PUT "https://api.bukalapak.com/v1/users/settings/bank/41829/primary.json" --data "payment_bank_account[name]=Bill Gates&payment_bank_account[bank]=Bank Central Asia (BCA)&payment_bank_account[number]=123 456 789&password=testing1234"
+curl -u 204254:Sy7PRGGr4foUk22uzjMu -X PUT "https://api.bukalapak.com/v2/users/settings/bank/41829/primary.json" --data "payment_bank_account[name]=Bill Gates&payment_bank_account[bank]=Bank Central Asia (BCA)&payment_bank_account[number]=123 456 789&password=testing1234"
 ````
 
 ##### Example Response
@@ -457,7 +457,7 @@ Set current user's primary bank account.
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/users/banks/:bank_account_id/primary.json]()
++ [https://api.bukalapak.com/v2/users/banks/:bank_account_id/primary.json]()
 
 ##### Parameters
 None
@@ -465,7 +465,7 @@ None
 
 ##### Example Request
 ````sh
-curl -u 204254:Sy7PRGGr4foUk22uzjMu -X PUT "https://api.bukalapak.com/v1/users/banks/41831/primary.json" --data ""
+curl -u 204254:Sy7PRGGr4foUk22uzjMu -X PUT "https://api.bukalapak.com/v2/users/banks/41831/primary.json" --data ""
 ````
 
 ##### Example Response
@@ -482,7 +482,7 @@ Delete current user's bank account.
 + Requires authentication
 
 ##### Resource URL
-+ [https://api.bukalapak.com/v1/users/banks/:bank_account_id.json]()
++ [https://api.bukalapak.com/v2/users/banks/:bank_account_id.json]()
 
 ##### Parameters
 None
@@ -490,7 +490,7 @@ None
 
 ##### Example Request
 ````sh
-curl -u 204254:Sy7PRGGr4foUk22uzjMu -X DELETE "https://api.bukalapak.com/v1/users/banks/41832.json" --data ""
+curl -u 204254:Sy7PRGGr4foUk22uzjMu -X DELETE "https://api.bukalapak.com/v2/users/banks/41832.json" --data ""
 ````
 
 ##### Example Response
